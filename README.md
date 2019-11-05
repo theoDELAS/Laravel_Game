@@ -29,3 +29,9 @@
 - Système de difficulté de jeu avec différentes histoires, certaines réalisable avec un level minimum requis pour réussir    
 - Gain d'xp à la fin d'évenements (à déterminer)  
 - Feuille du personnage avec son avancement  
+
+
+
+
+Trello's link:
+https://trello.com/b/DXgsMsVx/projet-laravel
