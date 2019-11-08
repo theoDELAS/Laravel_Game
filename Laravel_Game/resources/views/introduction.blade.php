@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section('h1')
-    Tutoriel
+    Introduction
 @stop
 
 
@@ -46,5 +46,9 @@
 
     <div>
         <a href="choixPerso">Choisir un personnage</a>
+    </div>
+
+    <div>
+        <a href="#">Passer le tuto</a>
     </div>
 @stop

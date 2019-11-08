@@ -8,7 +8,7 @@
     <div id="menu">
         <ul>
             <li>
-                <a href="/inscription" accesskey="1" title="">Inscription</a>
+                <a href="/users/create" accesskey="1" title="">Inscription</a>
             </li>
             <li>
                 <a href="/connexion" accesskey="2" title="">Connexion</a>
