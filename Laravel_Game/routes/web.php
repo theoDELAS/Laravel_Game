@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/inscription', function () {
+    return view('inscription');
+});
+
+Route::get('/connexion', function () {
+    return view('connexion');
+});
+
+Route::get('/miseEnPlace', function () {
+    return view('miseEnPlace');
+});
+
+Route::get('/choixPerso', function () {
+    return view('choixPerso');
+});
+
+Route::get('/histoireTuto', function () {
+    return view('histoireTuto');
+});
