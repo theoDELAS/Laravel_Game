@@ -19,6 +19,12 @@ class CreateInventairesTable extends Migration
             $table->integer('nombre_item');
             $table->unsignedBigInteger('personnage_id');
             $table->timestamps();
+
+            // si suppression du user, alors suppression de tous les personnages liés à ce user
+            $table->foreign('personnage_id')
+                ->references('id')
+                ->on('personnages')
+                ->onDelete('cascade');
         });
     }
 
