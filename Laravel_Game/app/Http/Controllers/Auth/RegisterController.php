@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Role;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,8 +30,19 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
 
+    //protected $redirectTo = '/home';
+    public function redirectTo(){
+
+        // User role
+        $roles = Auth::user()->roles()->get()->pluck('name');
+
+        if($roles->contains('admin')){
+            return '/admin/users';
+        }
+
+        return '/tuto';
+    }
     /**
      * Create a new controller instance.
      *
@@ -63,10 +76,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $role = Role::select('id')->where('name', 'user')->first();
+
+        $user->roles()->attach($role);
+
+        return $user;
     }
 }

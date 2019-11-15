@@ -37,8 +37,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function personnages()
-    {
-        return $this->hasMany(Personnage::class());
+    public function roles() {
+        return $this->belongsToMany('App\role');
+    }
+
+    public function hasRole($role) {
+        if ($this->roles()->where('name', $role)->first()) {
+            return true;
+        }
+        return false;
     }
 }

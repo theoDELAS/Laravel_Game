@@ -15,21 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users/create', 'UserController@create');
-Route::post('/users', 'UserController@store');
+Auth::routes();
 
-Route::get('/connexion', function () {
-    return view('connexion');
-});
+Route::get('/tuto', function() {
+    return view('/tuto');
+})->name('tuto');
 
-Route::get('/introduction', function () {
-    return view('introduction');
-});
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/choixPerso', function () {
-    return view('choixPerso');
-});
-
-Route::get('/histoireTuto', function () {
-    return view('histoireTuto');
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function (){
+    Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
