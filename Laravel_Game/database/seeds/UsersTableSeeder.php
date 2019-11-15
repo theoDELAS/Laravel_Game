@@ -21,15 +21,15 @@ class UsersTableSeeder extends Seeder
         $userRole = Role::where('name', 'user')->first();
 
         $admin = User::create([
-            'name' => 'Admin User',
+            'name' => 'Admin',
             'email' => 'admin@admin.com',
-            'password' => Hash::make('adminpassword')
+            'password' => Hash::make('password')
         ]);
 
         $user = User::create([
-            'name' => 'Generic User',
+            'name' => 'User',
             'email' => 'user@user.com',
-            'password' => Hash::make('userpassword')
+            'password' => Hash::make('password')
         ]);
 
         $admin->roles()->attach($adminRole);
