@@ -41,7 +41,7 @@ class RegisterController extends Controller
             return '/admin/users';
         }
 
-        return '/tuto';
+        return '/tuto/introduction';
     }
     /**
      * Create a new controller instance.
@@ -82,7 +82,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        $role = Role::select('id')->where('name', 'user')->first();
+        $role = Role::select('id')->where('name', 'first')->first();
 
         $user->roles()->attach($role);
 

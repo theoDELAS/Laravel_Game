@@ -22,6 +22,13 @@ class UsersController extends Controller
      */
     public function index()
     {
+        if (Gate::denies('admin-users')) {
+            if (Gate::denies('basic-users')) {
+                return redirect(route('introduction'));
+            }
+            return redirect(route('home'));
+        }
+
         $users = User::all();
         return view('admin.users.index')->with('users', $users);
     }

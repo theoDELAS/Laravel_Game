@@ -43,7 +43,7 @@
         </div>
 
         <div>
-            <a href="choixPerso">Choisir un personnage</a>
+            <a href="#">Choisir un personnage</a>
         </div>
 
         <div>
