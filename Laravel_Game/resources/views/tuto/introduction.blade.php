@@ -47,7 +47,13 @@
         </div>
 
         <div>
-            <a href="#">Passer le tuto</a>
+            <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}">Passer le tuto</a>
         </div>
+
+
+{{--        {{$role = auth()->user()->roles()->get()->pluck('name') }}--}}
+{{--        @if ($role->contains('admin'))--}}
+{{--            <h1>oookkkkkk</h1>--}}
+{{--        @endif--}}
     </div>
 @stop

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\User;
 use Gate;
 use Illuminate\Http\Request;
@@ -21,7 +22,14 @@ class TutoController extends Controller
         return view('tuto.introduction')->with('users', $users);
     }
 
-    public function passerTuto() {
-        //
+    public function passerTuto(User $user) {
+        $userRole = Role::where('name', 'user')->first();
+        // enleve le role de l'user
+        $user->roles()->detach();
+        // lui met son nouveau role 'user'
+        $user->roles()->attach($userRole);
+        //redirige vers la page 'home'
+        return redirect(route('home'));
+
     }
 }

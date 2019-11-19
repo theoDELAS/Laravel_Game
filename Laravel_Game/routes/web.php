@@ -21,6 +21,8 @@ Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('tuto/introduction', 'TutoController@index')->name('introduction');
 
+Route::get('passer/{user}', 'TutoController@passerTuto')->name('passer');
+
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function (){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });

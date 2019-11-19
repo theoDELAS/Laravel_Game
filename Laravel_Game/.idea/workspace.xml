@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4678b5-5e4f-4502-8404-4302faefc525" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Ynov/2iemeAnnee/Laravel_Game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Laracasts/cours_laravel6" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -173,7 +178,7 @@
       <workItem from="1573811029203" duration="5594000" />
       <workItem from="1573829628131" duration="7747000" />
       <workItem from="1574089183931" duration="14709000" />
-      <workItem from="1574150537385" duration="1022000" />
+      <workItem from="1574150537385" duration="9082000" />
     </task>
     <servers />
   </component>
