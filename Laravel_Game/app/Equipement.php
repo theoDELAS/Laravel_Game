@@ -33,4 +33,12 @@ class Equipement extends Model
      */
     protected $casts = [
     ];
+
+    public function personnage() {
+        return $this->belongsTo('App\personnage');
+    }
+
+    public function items() {
+        return $this->hasMany('App\item');
+    }
 }

@@ -34,4 +34,12 @@ class Item extends Model
      */
     protected $casts = [
     ];
+
+    public function inventaire() {
+        return $this->belongsTo('App\inventaire');
+    }
+
+    public function equipement() {
+        return $this->belongsTo('App\equipement');
+    }
 }
