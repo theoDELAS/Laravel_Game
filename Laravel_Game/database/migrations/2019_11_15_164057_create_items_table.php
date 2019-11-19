@@ -17,7 +17,7 @@ class CreateItemsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('nombre_slot');
             $table->integer('nombre_item');
-            $table->unsignedBigInteger('personnage_id');
+            $table->unsignedBigInteger('inventaires_id');
             $table->timestamps();
         });
     }
