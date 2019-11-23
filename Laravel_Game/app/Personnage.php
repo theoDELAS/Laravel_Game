@@ -15,7 +15,7 @@ class Personnage extends Model
      * @var array
      */
     protected $fillable = [
-        'pseudo', 'lvl_perso', 'user_id', 'histoire_completed', 'classe', 'hp_base', 'hp_max', 'hp_current', 'degat_base', 'degat_max', 'degat_current', 'defense_base', 'defense_max', 'defense_current', 'esquive_base', 'esquive_max', 'esquive_current', 'inventaire_id',
+        'pseudo', 'lvl_perso', 'histoire_completed',
     ];
 
     /**
@@ -33,4 +33,13 @@ class Personnage extends Model
      */
     protected $casts = [
     ];
+
+
+    public function user() {
+        return $this->belongsToMany('App\User');
+    }
+
+    public function classe() {
+        return $this->belongsToMany('App\Classe');
+    }
 }

@@ -2,11 +2,10 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class Classe extends Model
 {
     use Notifiable;
 
@@ -16,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'hp_base', 'hp_max', 'hp_current', 'degat_base', 'degat_max', 'degat_current', 'defense_base', 'defense_max', 'defense_current', 'esquive_base', 'esquive_max', 'esquive_current',
     ];
 
     /**
@@ -25,7 +24,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
     ];
 
     /**
@@ -34,19 +32,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
     ];
-
-    public function roles() {
-        return $this->belongsToMany('App\role');
-    }
-
-    public function hasRole($role) {
-        if ($this->roles()->where('name', $role)->first()) {
-            return true;
-        }
-        return false;
-    }
 
     public function personnages() {
         return $this->belongsToMany('App\Personnage');

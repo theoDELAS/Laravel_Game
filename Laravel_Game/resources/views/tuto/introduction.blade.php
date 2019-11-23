@@ -43,17 +43,12 @@
         </div>
 
         <div>
-            <a href="#">Choisir un personnage</a>
+            <a href="{{ route('personnage.create') }}">Choisir un personnage</a>
         </div>
 
         <div>
             <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}">Passer le tuto</a>
         </div>
 
-
-{{--        {{$role = auth()->user()->roles()->get()->pluck('name') }}--}}
-{{--        @if ($role->contains('admin'))--}}
-{{--            <h1>oookkkkkk</h1>--}}
-{{--        @endif--}}
     </div>
 @stop

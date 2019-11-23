@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Personnage;
 use App\Role;
 use App\User;
 use Gate;
@@ -22,6 +23,10 @@ class TutoController extends Controller
         return view('tuto.introduction')->with('users', $users);
     }
 
+    public function tuto1() {
+        return view('tuto.tuto1');
+    }
+
     public function passerTuto(User $user) {
         $userRole = Role::where('name', 'user')->first();
         // enleve le role de l'user
@@ -31,5 +36,15 @@ class TutoController extends Controller
         //redirige vers la page 'home'
         return redirect(route('home'));
 
+    }
+
+    public function create()
+    {
+        //
+    }
+
+    public function store()
+    {
+        //
     }
 }

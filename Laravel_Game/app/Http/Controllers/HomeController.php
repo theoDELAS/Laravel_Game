@@ -32,7 +32,7 @@ class HomeController extends Controller
             return redirect(route('admin.users.index'));
         }
 
-        $users = User::all();
-        return view('home')->with('users', $users);
+        $user = User::find(auth()->user()->id);
+        return view('home', ['user' => $user]);
     }
 }

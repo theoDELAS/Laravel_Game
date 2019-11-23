@@ -2,22 +2,27 @@
 
 @section('content')
 <div class="container">
+    <h1 class="text-center mb-5">{{ $user->name }}</h1>
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        @foreach($user->$personnages as $personnage )
+        <div class="col-md-4">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">
+                    <h2 class="text-center">{{ $personnage->pseudo }}</h2>
+                </div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
                     You are logged in!
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn btn-primary btn-block" type="button">Sélectionner</button>
                 </div>
             </div>
         </div>
+        @endforeach
+
+
     </div>
 </div>
 @endsection
