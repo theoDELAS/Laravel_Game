@@ -28,7 +28,6 @@ Route::get('personnages/create', 'PersonnageController@create')->name('personnag
 
 Route::get('tuto/introduction', 'TutoController@index')->name('introduction');
 
-
 Route::get('tuto/tuto1', 'TutoController@tuto1')->name('tuto.tuto1');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function (){

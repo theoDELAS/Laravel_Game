@@ -42,13 +42,10 @@
             obcaecati quos vero?
         </div>
 
-        <div>
-            <a href="{{ route('personnage.create') }}">Choisir un personnage</a>
-        </div>
+        <a href="{{ route('personnage.create') }}" class="btn btn-primary btn-block my-4 mx-auto">Choisir un personnage</a>
 
-        <div>
-            <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}">Passer le tuto</a>
-        </div>
+        <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}" class="btn btn-danger btn-block w-25 mx-auto">Passer le tuto</a>
+
 
     </div>
 @stop

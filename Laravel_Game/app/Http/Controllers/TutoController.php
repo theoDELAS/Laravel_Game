@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Personnage;
 use App\Role;
 use App\User;
+use Faker\Provider\Person;
 use Gate;
 use Illuminate\Http\Request;
 
@@ -23,8 +24,10 @@ class TutoController extends Controller
         return view('tuto.introduction')->with('users', $users);
     }
 
-    public function tuto1() {
-        return view('tuto.tuto1');
+    public function tuto1()
+    {
+        $personnages = Personnage::all()->first();
+        return view('tuto.tuto1')->with('personnages', $personnages);
     }
 
     public function passerTuto(User $user) {

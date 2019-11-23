@@ -2,6 +2,8 @@
 
 @section('content')
 
-    <h1>Personnage créé, bienvenue dans le tuto</h1>
-
+    <div class="container">
+        <h1 class="text-center">Bienvenue dans le tutoriel {{ $personnages->pseudo }}</h1>
+    </div>
+    
 @endsection

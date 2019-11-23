@@ -6,6 +6,7 @@ use App\Classe;
 use App\Personnage;
 use App\User;
 use Illuminate\Http\Request;
+use Gate;
 
 class PersonnageController extends Controller
 {
@@ -28,7 +29,9 @@ class PersonnageController extends Controller
      */
     public function create()
     {
-        return view ('personnages.create');
+        $classes = Classe::all();
+
+        return view ('personnages.create')->with('classes', $classes);
     }
 
     /**
@@ -57,7 +60,12 @@ class PersonnageController extends Controller
         $classe = Classe::select('id')->where('name', request('classe'))->first();
         $personnage->classe()->attach($classe);
 
-        return redirect('tuto/tuto1');
+
+        if (Gate::denies('first-users')) {
+            return redirect(route('home'));
+        }
+        $users = User::all();
+        return redirect('tuto/tuto1')->with('users', $users);
     }
 
     /**
@@ -103,31 +111,5 @@ class PersonnageController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-
-
-    public function validateGuerrier()
-    {
-        return request()->validate([
-            'pseudo' => ['required', 'min:3', 'max:20'],
-            'lvl_perso' => 'required',
-            'histoire_completed' => 'required',
-            'class' => 'required',
-//            'hp_base' => 'required',
-//            'hp_max' => 'required',
-//            'hp_current' => 'required',
-//            'degat_base' => 'required',
-//            'degat_max' => 'required',
-//            'degat_current' => 'required',
-//            'defense_base' => 'required',
-//            'defense_max' => 'required',
-//            'defense_current' => 'required',
-//            'esquive_base' => 'required',
-//            'esquive_max' => 'required',
-//            'esquive_current' => 'required',
-//            'user_id' => 'required',
-//            'inventaire_id' => 'required',
-        ]);
     }
 }
