@@ -1,4 +1,4 @@
-@extends ('layouts.app')
+@extends ('tuto.appTuto')
 
 
 @section('content')
@@ -43,8 +43,6 @@
         </div>
 
         <a href="{{ route('personnage.create') }}" class="btn btn-primary btn-block my-4 mx-auto">Choisir un personnage</a>
-
-        <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}" class="btn btn-danger btn-block w-25 mx-auto">Passer le tuto</a>
 
 
     </div>

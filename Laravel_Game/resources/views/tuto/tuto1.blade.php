@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('tuto.appTuto')
 
 @section('content')
 
     <div class="container">
         <h1 class="text-center">Bienvenue dans le tutoriel {{ $personnages->pseudo }}</h1>
     </div>
-    
+
 @endsection

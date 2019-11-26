@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Personnage;
 use App\User;
 use App\Role;
+use Exception;
 use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class UsersController extends Controller
 {
@@ -18,7 +21,7 @@ class UsersController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -36,8 +39,8 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @param User $user
+     * @return Response
      */
     public function edit(User $user)
     {
@@ -55,9 +58,9 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param User $user
+     * @return Response
      */
     public function update(Request $request, User $user)
     {
@@ -73,8 +76,9 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @param User $user
+     * @return Response
+     * @throws Exception
      */
     public function destroy(User $user)
     {
@@ -82,6 +86,8 @@ class UsersController extends Controller
             return redirect(route('admin.users.index'));
         }
         $user->roles()->detach();
+        $user->personnages()->detach();
+
         $user->delete();
 
         return redirect()->route('admin.users.index');

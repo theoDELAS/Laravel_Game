@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4678b5-5e4f-4502-8404-4302faefc525" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/tuto/appTuto.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/personnages/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personnages/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tuto/tuto1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/tuto1.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,11 +138,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel/blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
       <recent name="C:\Users\theod\Desktop\Ynov\2iemeAnnee\PROJETS\Laravel_Game\resources\views\admin\users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -188,7 +188,8 @@
       <workItem from="1574181503342" duration="5116000" />
       <workItem from="1574238780867" duration="31000" />
       <workItem from="1574424612767" duration="14633000" />
-      <workItem from="1574502462960" duration="15178000" />
+      <workItem from="1574502462960" duration="17645000" />
+      <workItem from="1574675598766" duration="863000" />
     </task>
     <servers />
   </component>
