@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7a7ca114-195f-497a-9ba8-a28db8252dc4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Laravel_Game/app/Equipement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel_Game/app/Equipement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laravel_Game/app/Inventaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel_Game/app/Inventaire.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laravel_Game/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel_Game/app/Item.php" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +22,7 @@
       <executable />
     </execution>
   </component>
+<<<<<<< Updated upstream
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -140,6 +144,11 @@
       </list>
     </option>
   </component>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+>>>>>>> Stashed changes
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/Laravel_Game/vendor/phpunit/php-timer" />
@@ -231,6 +240,7 @@
       <path value="$PROJECT_DIR$/Laravel_Game/vendor/symfony/console" />
     </include_path>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="248" />
     <option name="y" value="-14" />
@@ -316,6 +326,9 @@
       <pane id="Scope" />
     </panes>
   </component>
+=======
+  <component name="ProjectId" id="1TpeRs6FWFmYQ6bo60aRDdtSoxX" />
+>>>>>>> Stashed changes
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -345,6 +358,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574151444442</updated>
+<<<<<<< Updated upstream
       <workItem from="1574151450394" duration="4782000" />
       <workItem from="1574161477394" duration="2127000" />
     </task>
@@ -534,5 +548,28 @@
         </state>
       </provider>
     </entry>
+=======
+      <workItem from="1574151450394" duration="4468000" />
+      <workItem from="1574161468070" duration="623000" />
+      <workItem from="1574591013986" duration="601000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> Stashed changes
   </component>
 </project>
