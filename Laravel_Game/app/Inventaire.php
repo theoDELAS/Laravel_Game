@@ -15,7 +15,7 @@ class Inventaire extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre_slot', 'nombre_item', 'personnage_id',
+        'nombre_slot', 'nombre_item',
     ];
 
     /**
@@ -35,10 +35,11 @@ class Inventaire extends Model
     ];
 
     public function personnage() {
-        return $this->belongsTo('App\personnage');
+        return $this->belongsToMany('App\Personnage');
     }
 
     public function items() {
-        return $this->hasMany('App\item');
+        return $this->belongsToMany('App\Items');
     }
+
 }

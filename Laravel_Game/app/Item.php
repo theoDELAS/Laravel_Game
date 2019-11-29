@@ -16,7 +16,7 @@ class Item extends Model
      * @var array
      */
     protected $fillable = [
-        'nom', 'quantite', 'degats', 'defense', 'hp', 'equipement_id', 'inventaires_id'
+        'nom', 'quantite', 'degats', 'defense', 'hp'
     ];
 
     /**
@@ -36,10 +36,7 @@ class Item extends Model
     ];
 
     public function inventaire() {
-        return $this->belongsTo('App\inventaire');
+        return $this->belongsToMany('App\Inventaire');
     }
 
-    public function equipement() {
-        return $this->belongsTo('App\equipement');
-    }
 }

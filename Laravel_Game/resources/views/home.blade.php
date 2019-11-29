@@ -23,7 +23,12 @@
                 </div>
 
                 <div class="card-footer">
-                    <button class="btn btn-primary btn-block" type="button">Sélectionner</button>
+                    <form  class="d-inline" action="{{ route('personnage.destroy', $personnage->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-primary btn-block" type="button">Sélectionner</button>
+                        <button type="submit" onclick="return myFunction();" class="btn btn-danger btn-block">Supprimer</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -35,4 +40,10 @@
 
     </div>
 </div>
+<script>
+    function myFunction() {
+        if(!confirm("Voulez-vous vraiment supprimer ce personnage?"))
+            event.preventDefault();
+    }
+</script>
 @endsection

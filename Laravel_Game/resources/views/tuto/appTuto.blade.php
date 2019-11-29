@@ -79,9 +79,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="container py-4">
             @yield('content')
-            <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}" class="btn btn-danger btn-block w-25 mx-auto">Passer le tuto</a>
+                <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}" class="btn btn-danger btn-block mx-auto">Passer le tuto</a>
+
         </main>
     </div>
 </body>

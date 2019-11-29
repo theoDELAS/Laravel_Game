@@ -45,6 +45,18 @@ class CreatePersonnagesTable extends Migration
             $table->foreign('personnage_id')->references('id')->on('personnages')->onDelete('cascade');
         });
 
+        Schema::create('inventaire_personnage', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('inventaire_id');
+            $table->unsignedBigInteger('personnage_id');
+            $table->timestamps();
+
+            $table->unique(['inventaire_id', 'personnage_id']);
+
+            $table->foreign('inventaire_id')->references('id')->on('inventaires')->onDelete('cascade');
+            $table->foreign('personnage_id')->references('id')->on('personnages')->onDelete('cascade');
+        });
+
     }
 
     /**

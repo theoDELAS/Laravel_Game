@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-        <h1 class="text-center">Introduction</h1>
+        <h1 class="text-center">Bienvenue dans le tutoriel</h1>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi consequatur deleniti distinctio
             dolore eaque eos est, facere in ipsa iusto mollitia, numquam officiis porro quasi recusandae similique ullam
             voluptates.

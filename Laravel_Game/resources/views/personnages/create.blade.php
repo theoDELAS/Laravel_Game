@@ -5,7 +5,7 @@
         <div class="container" id="page">
             <h1 class="heading has-text-weight-bold is-size-4 text-center mb-5">Créer son personnage</h1>
 
-            <form method="POST" action="/personnages" class="mx-auto w-25 mb-5">
+            <form method="POST" action="{{ route('personnage.store') }}" class="mx-auto w-25 mb-5">
                 @csrf
                 <div class="field pb-3">
                     <div class="control">

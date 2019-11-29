@@ -16,8 +16,10 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nom');
-            $table->unsignedBigInteger('inventaires_id');
-            $table->unsignedBigInteger('equipement_id');
+            $table->integer('quantite');
+            $table->integer('degats');
+            $table->integer('defense');
+            $table->integer('hp');
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use App\Personnage;
 use App\Role;
 use App\User;
@@ -24,10 +25,22 @@ class TutoController extends Controller
         return view('tuto.introduction')->with('users', $users);
     }
 
-    public function tuto1()
+    public function page1()
     {
-        $personnages = Personnage::all()->first();
-        return view('tuto.tuto1')->with('personnages', $personnages);
+        $personnage = Personnage::get()->last();
+        return view('tuto.page1')->with('personnage', $personnage);
+    }
+
+    public function page2()
+    {
+        $personnage = Personnage::get()->last();
+        return view('tuto.page2')->with('personnage', $personnage);
+    }
+
+    public function page3()
+    {
+        $personnage = Personnage::get()->last();
+        return view('tuto.page3')->with('personnage', $personnage);
     }
 
     public function passerTuto(User $user) {

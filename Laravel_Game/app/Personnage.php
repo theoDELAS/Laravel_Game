@@ -42,4 +42,8 @@ class Personnage extends Model
     public function classe() {
         return $this->belongsToMany('App\Classe');
     }
+
+    public function inventaire() {
+        return $this->belongsToMany('App\Inventaire');
+    }
 }
