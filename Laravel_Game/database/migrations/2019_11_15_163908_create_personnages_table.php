@@ -41,7 +41,7 @@ class CreatePersonnagesTable extends Migration
 
             $table->unique(['classe_id', 'personnage_id']);
 
-            $table->foreign('classe_id')->references('id')->on('classes')->onDelete('cascade');
+            $table->foreign('classe_id')->references('id')->on('classe')->onDelete('cascade');
             $table->foreign('personnage_id')->references('id')->on('personnages')->onDelete('cascade');
         });
 

@@ -14,12 +14,7 @@ class TutoController extends Controller
 {
     public function index()
     {
-        if (Gate::denies('first-users')) {
-            if (Gate::denies('admin-users')) {
-                return redirect(route('home'));
-            }
-            return redirect(route('admin.users.index'));
-        }
+        $this->isFirstRedirect();
 
         $users = User::all();
         return view('tuto.introduction')->with('users', $users);
@@ -27,18 +22,24 @@ class TutoController extends Controller
 
     public function page1()
     {
+        $this->isFirstRedirect();
+
         $personnage = Personnage::get()->last();
         return view('tuto.page1')->with('personnage', $personnage);
     }
 
     public function page2()
     {
+        $this->isFirstRedirect();
+
         $personnage = Personnage::get()->last();
         return view('tuto.page2')->with('personnage', $personnage);
     }
 
     public function page3()
     {
+        $this->isFirstRedirect();
+
         $personnage = Personnage::get()->last();
         return view('tuto.page3')->with('personnage', $personnage);
     }
@@ -62,5 +63,15 @@ class TutoController extends Controller
     public function store()
     {
         //
+    }
+
+    public function isFirstRedirect() {
+        // Si le joueur à le status admin il est redirigé vers la page admin, si c'est un user normal il est dirigé vers sa page home
+        if (Gate::denies('first-users')) {
+            if (Gate::denies('admin-users')) {
+                return redirect(route('home'));
+            }
+            return redirect(route('admin.users.index'));
+        }
     }
 }

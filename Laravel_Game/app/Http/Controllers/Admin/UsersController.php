@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Classe;
 use App\Http\Controllers\Controller;
 use App\Personnage;
 use App\User;
@@ -33,7 +34,18 @@ class UsersController extends Controller
         }
 
         $users = User::all();
-        return view('admin.users.index')->with('users', $users);
+        $classes = Classe::all();
+        return view('admin.users.index')->with([
+            'users' => $users,
+            'classes' => $classes,
+        ]);
+    }
+
+    public function show(User $user)
+    {
+        return view('admin.users.show')->with([
+            'user' => $user,
+        ]);
     }
 
     /**

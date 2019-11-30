@@ -2,24 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4678b5-5e4f-4502-8404-4302faefc525" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/tuto/page2.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tuto/page3.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/classe/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/classe/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Inventaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Inventaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Personnage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Personnage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_163908_create_personnages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_163908_create_personnages_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_164027_create_inventaires_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_164027_create_inventaires_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_164057_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_164057_create_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/personnages/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personnages/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tuto/appTuto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/appTuto.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tuto/tuto1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/page1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_23_103854_create_classes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_23_103854_create_classes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/page1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/page1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/cae9dcde51aeb0a8b231d6adb3dbd9c697bb74ea.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/cae9dcde51aeb0a8b231d6adb3dbd9c697bb74ea.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,13 +153,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\personnages" />
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
       <recent name="C:\Users\theod\Desktop\Ynov\2iemeAnnee\PROJETS\Laravel_Game\resources\views\admin\users" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\app\Http\Controllers\Admin" />
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\personnages" />
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -204,6 +206,7 @@
       <workItem from="1574842481973" duration="147000" />
       <workItem from="1574865420378" duration="644000" />
       <workItem from="1574961444695" duration="7912000" />
+      <workItem from="1575127525216" duration="10261000" />
     </task>
     <servers />
   </component>

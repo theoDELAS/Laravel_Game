@@ -19,6 +19,18 @@ class CreateInventairesTable extends Migration
             $table->integer('nombre_item');
             $table->timestamps();
         });
+
+        Schema::create('inventaire_item', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('item_id');
+            $table->unsignedBigInteger('inventaire_id');
+            $table->timestamps();
+
+            $table->unique(['item_id', 'inventaire_id']);
+
+            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
+            $table->foreign('inventaire_id')->references('id')->on('inventaires')->onDelete('cascade');
+        });
     }
 
     /**

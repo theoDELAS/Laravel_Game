@@ -35,11 +35,11 @@ class PersonnageController extends Controller
      */
     public function create()
     {
-        // Selectionne mes classes
+        // Selectionne mes classe
         $classes = Classe::all();
 
-        // retourne ma vue de création de personnage avec comme parametre mes classes stockées dans la variable $classes
-        return view ('personnages.create')->with('classes', $classes);
+        // retourne ma vue de création de personnage avec comme parametre mes classe stockées dans la variable $classe
+        return view ('personnages.create')->with('classe', $classes);
     }
 
     /**
@@ -48,7 +48,7 @@ class PersonnageController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store()
     {
         // ma requete a besoin d'un pseudo pour etre valide
         request()->validate([
@@ -72,7 +72,7 @@ class PersonnageController extends Controller
             'nombre_item' => 0,
         ]);
 
-        // sauvegarde le personnage créé et envoie les info dans la bdd
+        // sauvegarde le personnage créé et envoie les infos dans la bdd
         $personnage->save();
 
         // Selectionne l'user qui vient de créer ce personnage
@@ -144,18 +144,26 @@ class PersonnageController extends Controller
      */
     public function destroy(Personnage $personnage)
     {
+        // Supprime le personnage
         $personnage->delete();
+        // Supprime la liaison entre le personnage et l'utilisateur à qui il appartient
+        $personnage->user()->detach();
+        // Supprime l'inventaire du personnage
+        $personnage->inventaire()->delete();
+        // Supprime la liaison entre l'inventaire et le personnage
+        $personnage->inventaire()->detach();
+        // Supprime la liaison entre le personnage et sa classe
+        $personnage->classe()->detach();
 
         return redirect()->route('home');
     }
 
     public function getItem() {
-        $item = Item::select('id')->where('nom', 'Epée');
-        $inventaire = Inventaire::where('id', 1)->get()->last();
-
-        $inventaire->items()->attach($item);
-
-        return redirect(route('tuto.page2'));
+//        $item = Item::get()->where('nom', request('nom'))->first();
+//        $inventaire = Inventaire::get()->last();
+//        $inventaire->items()->attach($item);
+//
+//        return redirect(route('tuto.page2'));
 
     }
 }

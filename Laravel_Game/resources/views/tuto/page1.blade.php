@@ -8,9 +8,21 @@
 
         <p>
             <span class="alert-danger lead">Vous décidez :</span>
-            <a href="{{ route('tuto.page2') }}" class="btn btn-outline-dark w-25 my-4 mx-auto">Choix 1</a>
-            <a href="{{ route('tuto.page3') }}" class="btn btn-outline-dark w-25 my-4 mx-auto">Choix 2</a>
-            <a href="{{ route('personnage.getItem') }}" class="btn btn-outline-dark w-25 my-4 mx-auto">Epée</a>
+            <form method="POST" action="{{ route('personnage.getItem') }}">
+                @csrf
+                <div class="field pb-3">
+                    <div class="control">
+                        <input type="hidden" class="form-control input" name="nom" id="nom" value="Epée">
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <a href="{{ route('tuto.page2') }}" class="btn btn-outline-dark my-4">Choix 1</a>
+                        <a href="{{ route('tuto.page3') }}" class="btn btn-outline-dark my-4">Choix 2</a>
+                        <button class="btn btn-outline-dark my-4" type="submit">Epée</button>
+                    </div>
+                </div>
+            </form>
         </p>
 
 @endsection

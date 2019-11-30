@@ -39,7 +39,7 @@ class Inventaire extends Model
     }
 
     public function items() {
-        return $this->belongsToMany('App\Items');
+        return $this->belongsToMany('App\Item');
     }
 
 }

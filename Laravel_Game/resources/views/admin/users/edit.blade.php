@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Edit user {{ $user->name }}</div>
+                    <div class="card-header h3 text-center">Modifier l'utilisateur {{ $user->name }}</div>
 
                     <div class="card-body">
                         <form action="{{ route('admin.users.update', $user) }}" method="POST">
@@ -25,7 +25,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-2 col-form-label text-md-right">Name</label>
+                                <label for="name" class="col-md-2 col-form-label text-md-right">Nom</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
@@ -41,7 +41,7 @@
                             @csrf
                             {{ method_field('PUT') }}
                             <div class="form-group row">
-                                <label for="roles" class="col-md-2 col-form-label text-md-right">Roles</label>
+                                <label for="roles" class="col-md-2 col-form-label text-md-right">Role</label>
 
                                 <div class="col-md-6">
                                     @foreach($roles as $role)
