@@ -49513,3 +49513,11 @@ module.exports = __webpack_require__(/*! C:\Users\theod\Desktop\Ynov\2iemeAnnee\
 /***/ })
 
 /******/ });
+
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
