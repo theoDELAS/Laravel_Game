@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container">
+        <a href="{{ route('admin.users.index') }}">
+            <button type="button" class="btn btn-primary">Retour</button>
+        </a>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -55,7 +58,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-warning btn-block">
                                 Modifier
                             </button>
                         </form>

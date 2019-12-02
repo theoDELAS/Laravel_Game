@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <div class="card">
                     <div class="card-header h3 text-center">
                         Utilisateurs
@@ -49,9 +49,7 @@
                     </div>
                 </div>
             </div>
-
-
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <div class="card">
                     <div class="card-header h3 text-center">
                         Classes
@@ -65,6 +63,7 @@
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
+                            <a href="{{ route('admin.classe.create') }}" class="btn btn-success btn-block mx-auto mb-3"><i class="fas fa-plus"></i></a>
                             <tbody class="text-center">
                             @foreach($classes as $classe)
                                 <tr>
