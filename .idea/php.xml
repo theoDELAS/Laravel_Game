@@ -89,6 +89,9 @@
       <path value="$PROJECT_DIR$/Laravel_Game/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/Laravel_Game/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/Laravel_Game/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/Laravel_Game/vendor/binarytorch/larecipe" />
+      <path value="$PROJECT_DIR$/Laravel_Game/vendor/erusev/parsedown-extra" />
+      <path value="$PROJECT_DIR$/Laravel_Game/vendor/symfony/dom-crawler" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
