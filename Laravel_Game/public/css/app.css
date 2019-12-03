@@ -11100,3 +11100,67 @@ a.text-dark:focus {
   }
 }
 
+section.custom {
+  /* flip the pane when hovered */
+  /* front pane, placed above back */
+  /* back, initially hidden pane */
+}
+
+section.custom .card {
+  text-align: center;
+  width: 100%;
+  height: 350px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+section.custom .flipper {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 10px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+section.custom .flipper.flip .card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+section.custom .front,
+section.custom .back {
+  width: 100%;
+  padding: 5px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section.custom .front {
+  z-index: 2;
+  /* for firefox 31 */
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  height: 100%;
+}
+
+section.custom .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  height: 100%;
+}
+
+section.custom .goback {
+  position: absolute;
+  bottom: 0px;
+  padding-left: 20px;
+  left: 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+

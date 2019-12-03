@@ -22,15 +22,15 @@
                                     <input id="hp" name="hp" type="number" class="form-control text-center mx-auto w-25 d-inline" value="{{ old('hp') }}" placeholder="Vie">
                                 </li>
                                 <li class="list-group-item text-center">
-                                    <i class="fas fa-gavel mr-2"></i>
+                                    <i class="fas fa-gavel fa-lg mr-2"></i>
                                     <input id="degat" name="degat" type="number" class="form-control text-center mx-auto w-25 d-inline" value="{{ old('degat') }}" placeholder="Dégats">
                                 </li>
                                 <li class="list-group-item text-center">
-                                    <i class="fas fa-shield-alt mr-2"></i>
+                                    <i class="fas fa-shield-alt fa-lg mr-2"></i>
                                     <input id="defense" name="defense" type="number" class="form-control text-center mx-auto w-25 d-inline" value="{{ old('defense') }}" placeholder="Défense">
                                 </li>
                                 <li class="list-group-item text-center">
-                                    <i class="fas fa-walking mr-3"></i>
+                                    <i class="fas fa-walking fa-lg mr-3"></i>
                                     <input id="esquive" name="esquive" type="number" class="form-control text-center mx-auto w-25 d-inline" value="{{ old('esquive') }}" placeholder="Esquive">
                                 </li>
                             </ul>

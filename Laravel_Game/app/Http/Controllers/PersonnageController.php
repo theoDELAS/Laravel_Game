@@ -21,11 +21,8 @@ class PersonnageController extends Controller
      */
     public function index()
     {
-        // Selectionne le dernier personnage de la bdd
-        $personnage = Personnage::latest()->get();
-
         // retourne la vue home avec comme parametres mon personnage stocké dans la variable $personnage
-        return view('home', ['personnage' => $personnage]);
+        return view('home');
     }
 
     /**
@@ -39,7 +36,7 @@ class PersonnageController extends Controller
         $classes = Classe::all();
 
         // retourne ma vue de création de personnage avec comme parametre mes classe stockées dans la variable $classe
-        return view ('personnages.create')->with('classe', $classes);
+        return view ('personnages.create')->with('classes', $classes);
     }
 
     /**
@@ -144,6 +141,7 @@ class PersonnageController extends Controller
      */
     public function destroy(Personnage $personnage)
     {
+        dd($personnage);
         // Supprime le personnage
         $personnage->delete();
         // Supprime la liaison entre le personnage et l'utilisateur à qui il appartient

@@ -30,3 +30,14 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+$(".flipper").click(function() {
+    let target = $( event.target );
+    if ( target.is("a") ) {
+        //follow that link
+        return true;
+    } else {
+        $(this).toggleClass("flip");
+    }
+    return false;
+});
