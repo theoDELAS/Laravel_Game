@@ -49524,4 +49524,16 @@ module.exports = __webpack_require__(/*! D:\wamp64\www\Laravel_Game\Laravel_Game
 
 /***/ })
 
+<<<<<<< HEAD
 /******/ });
+=======
+/******/ });
+
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+>>>>>>> 5f2b10112e8cf7bafc2a2e01fdf9a08d14e6757c
