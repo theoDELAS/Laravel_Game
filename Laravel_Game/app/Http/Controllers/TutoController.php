@@ -31,9 +31,12 @@ class TutoController extends Controller
 
         $personnage = Personnage::get()->last();
         $items = Item::all();
+        $persoInventaire = $personnage->inventaire()->get()->first();
+        $itemsInventaire = $persoInventaire->items()->get()->all();
         return view('tuto.page1')->with([
             'personnage'=> $personnage,
             'items' => $items,
+            'itemsInventaire' => $itemsInventaire,
         ]);
     }
 

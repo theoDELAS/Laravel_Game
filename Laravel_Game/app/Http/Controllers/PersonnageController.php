@@ -11,6 +11,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Gate;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class PersonnageController extends Controller
 {
@@ -168,18 +169,29 @@ class PersonnageController extends Controller
         $personnage = Personnage::get()->where('pseudo', request('pseudo'))->first();
         $item = Item::get()->where('nom', request('nom'))->first();
         $inventaire = Inventaire::get()->last();
+
+
+        $persoInventaire = $personnage->inventaire()->get()->first();
+        $itemsInventaire = $persoInventaire->items()->get()->all();
+
+
         $personnage->update([
-            'hp' => ($personnage->degats +  $item->hp),
+            'hp' => ($personnage->hp +  $item->hp),
             'degats' => ($personnage->degats +  $item->degats),
-            'defense' => ($personnage->degats +  $item->defense),
-            'esquive' => ($personnage->degats +  $item->esquive),
+            'defense' => ($personnage->defense +  $item->defense),
+            'esquive' => ($personnage->esquive +  $item->esquive),
+        ]);
+
+        $inventaire->update([
+            'nombre_items' => ($inventaire->nombre_items +  1)
         ]);
 
         $inventaire->items()->attach($item);
 
-
-
-        return redirect()->back()->withErrors(['success' => 'Vous avez ramassé une épée']);
+        return redirect()->back()->withErrors([
+            'success' => 'Équipement équipé. Vos statistiques vienne d\'être modifiées',
+            'itemsInventaire' => $itemsInventaire
+        ]);
 
     }
 }
