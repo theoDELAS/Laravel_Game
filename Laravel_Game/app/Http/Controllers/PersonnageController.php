@@ -183,13 +183,14 @@ class PersonnageController extends Controller
         ]);
 
         $inventaire->update([
-            'nombre_items' => ($inventaire->nombre_items +  1)
+            'nombre_slot' => ($inventaire->nombre_slot -  1),
+            'nombre_item' => ($inventaire->nombre_item +  1),
         ]);
 
         $inventaire->items()->attach($item);
 
         return redirect()->back()->withErrors([
-            'success' => 'Équipement équipé. Vos statistiques vienne d\'être modifiées',
+            'success' => 'Objet équipé. Vos statistiques vienne d\'être modifiées',
             'itemsInventaire' => $itemsInventaire
         ]);
 

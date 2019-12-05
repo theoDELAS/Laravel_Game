@@ -15,10 +15,10 @@
                             <div class="card-body">
                                 <h3 class="text-center">{{ $classe->name }}</h3>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item text-center"><i class="fas fa-heart"></i> {{ $classe->hp_max }}</li>
-                                    <li class="list-group-item text-center"><i class="fas fa-gavel"></i>  {{ $classe->degat_max }}</li>
-                                    <li class="list-group-item text-center"><i class="fas fa-shield-alt"></i> {{ $classe->defense_max }}</li>
-                                    <li class="list-group-item text-center"><i class="fas fa-walking"></i> {{ $classe->esquive_max }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-heart"></i> {{ $classe->hp }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-gavel"></i>  {{ $classe->degats }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-shield-alt"></i> {{ $classe->defense }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-walking"></i> {{ $classe->esquive }}</li>
                                 </ul>
                             </div>
 
