@@ -28,6 +28,7 @@ class CreateClassesTable extends Migration
             $table->integer('esquive_base');
             $table->integer('esquive_max');
             $table->integer('esquive_current');
+            $table->longText('histoire');
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Classe;
 use App\Item;
 use App\Personnage;
 use App\Role;
@@ -17,7 +18,11 @@ class TutoController extends Controller
         $this->isFirstRedirect();
 
         $users = User::all();
-        return view('tuto.introduction')->with('users', $users);
+        $classes = Classe::all();
+        return view('tuto.introduction')->with([
+            'users'=> $users,
+            'classes' => $classes,
+        ]);
     }
 
     public function page1()
