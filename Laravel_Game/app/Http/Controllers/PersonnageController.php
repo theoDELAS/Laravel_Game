@@ -51,6 +51,7 @@ class PersonnageController extends Controller
         request()->validate([
             'pseudo' => 'required',
         ]);
+        $classe = Classe::get()->where('name', request('classe'))->first();
 
         // crée mon personnage avec les valeurs de ma requete
         $personnage = Personnage::create([
@@ -59,6 +60,14 @@ class PersonnageController extends Controller
             'lvl_perso' => 0,
             // un personnage a complété 0 histoire à la création
             'histoire_completed' => 0,
+            // a le nombre de hp de base de sa classe
+            'hp' => $classe->hp,
+            // a le nombre de degats de base de sa classe
+            'degats' => $classe->degats,
+            // a le nombre de defense de base de sa classe
+            'defense' => $classe->defense,
+            // a le nombre d'esquive de base de sa classe
+            'esquive' => $classe->esquive,
         ]);
 
         // Crée un inventaire
@@ -156,11 +165,21 @@ class PersonnageController extends Controller
     }
 
     public function getItem() {
-//        $item = Item::get()->where('nom', request('nom'))->first();
-//        $inventaire = Inventaire::get()->last();
-//        $inventaire->items()->attach($item);
-//
-//        return redirect(route('tuto.page2'));
+        $personnage = Personnage::get()->where('pseudo', request('pseudo'))->first();
+        $item = Item::get()->where('nom', request('nom'))->first();
+        $inventaire = Inventaire::get()->last();
+        $personnage->update([
+            'hp' => ($personnage->degats +  $item->hp),
+            'degats' => ($personnage->degats +  $item->degats),
+            'defense' => ($personnage->degats +  $item->defense),
+            'esquive' => ($personnage->degats +  $item->esquive),
+        ]);
+
+        $inventaire->items()->attach($item);
+
+
+
+        return redirect()->back()->withErrors(['success' => 'Vous avez ramassé une épée']);
 
     }
 }

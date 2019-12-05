@@ -16,18 +16,10 @@ class CreateClassesTable extends Migration
         Schema::create('classes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('hp_base');
-            $table->integer('hp_max');
-            $table->integer('hp_current');
-            $table->integer('degat_base');
-            $table->integer('degat_max');
-            $table->integer('degat_current');
-            $table->integer('defense_base');
-            $table->integer('defense_max');
-            $table->integer('defense_current');
-            $table->integer('esquive_base');
-            $table->integer('esquive_max');
-            $table->integer('esquive_current');
+            $table->integer('hp');
+            $table->integer('degats');
+            $table->integer('defense');
+            $table->integer('esquive');
             $table->longText('histoire');
             $table->timestamps();
         });

@@ -17,6 +17,10 @@ class CreatePersonnagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('pseudo')->unique();
             $table->integer('lvl_perso');
+            $table->integer('hp');
+            $table->integer('degats');
+            $table->integer('defense');
+            $table->integer('esquive');
             $table->integer('histoire_completed');
             $table->timestamps();
         });

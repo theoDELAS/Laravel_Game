@@ -30,7 +30,11 @@ class TutoController extends Controller
         $this->isFirstRedirect();
 
         $personnage = Personnage::get()->last();
-        return view('tuto.page1')->with('personnage', $personnage);
+        $items = Item::all();
+        return view('tuto.page1')->with([
+            'personnage'=> $personnage,
+            'items' => $items,
+        ]);
     }
 
     public function page2()

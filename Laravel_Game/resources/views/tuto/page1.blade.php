@@ -1,28 +1,34 @@
 @extends('tuto.appTuto')
 
 @section('content')
-
+    @error('success')
+        <p class="alert alert-success">{{ $message }}</p>
+    @enderror
+    <div class="container lead">
         <h1 class="text-center">{{ $personnage->pseudo }} arrive Page 1</h1>
-
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi ducimus eligendi eveniet, hic inventore minus, modi molestiae perferendis qui quibusdam ratione recusandae repellat, sequi soluta vitae voluptatum? Dolorem, expedita?</span><span>Accusantium aspernatur blanditiis cumque cupiditate deleniti ducimus earum error, exercitationem explicabo itaque, minus modi mollitia nam, necessitatibus odio odit omnis placeat quasi qui quidem recusandae similique sunt suscipit veniam voluptas.</span><span>Alias consequatur facilis laborum magni nulla perspiciatis possimus ratione repudiandae sit voluptatum. Consectetur dignissimos, earum in inventore laudantium magnam odit perspiciatis suscipit veniam. Asperiores delectus distinctio doloribus iure labore quidem.</span><span>A accusamus accusantium asperiores culpa cupiditate deleniti deserunt dolor doloremque doloribus ducimus, eius eligendi est fugit inventore ipsum labore laboriosam molestias omnis optio praesentium quaerat quibusdam recusandae tempora vel voluptatum.</span><span>Alias aperiam debitis deserunt ipsa nostrum perspiciatis quaerat quo! Ad doloremque, error inventore iste iure labore minima, natus necessitatibus nihil numquam porro qui voluptas voluptates. Debitis dignissimos dolorum enim voluptatibus?</span><span>Accusamus architecto beatae fuga, harum id in libero minus mollitia nisi odio quasi quis quo reprehenderit ullam veniam voluptates voluptatibus? Praesentium quaerat saepe vitae! Dolor ducimus ipsum magnam vel! Temporibus?</span><span>Adipisci aliquam autem commodi consequatur culpa, dolor dolore dolorum ipsam magnam molestiae molestias nisi pariatur, praesentium qui rem, temporibus vero? Asperiores doloremque dolorum fuga id placeat qui quibusdam temporibus vitae!</span><span>Dolorum ipsum nemo quas suscipit veniam? Adipisci autem cum dolorum error ex explicabo impedit ipsam odio optio quidem quisquam quo, quod rem reprehenderit sint suscipit tempora tempore vero voluptas, voluptatibus?</span><span>Cumque delectus natus officia quas repudiandae. Aliquid animi, aspernatur cum dolore ea esse fuga hic, ipsam ipsum, laboriosam natus neque nulla optio porro quaerat ratione reiciendis reprehenderit sapiente soluta vel!</span><span>Ab asperiores blanditiis ea eaque earum fugiat, obcaecati officia perferendis soluta suscipit temporibus vel veniam voluptatem! Cum dolor esse, harum maiores odit quibusdam ratione tempora. Adipisci commodi et necessitatibus non.</span><span>Cum cumque deserunt ea eligendi et explicabo impedit itaque modi nemo non porro quibusdam quod ratione rem rerum, saepe sint sit, totam ut voluptas? Esse est in iste nihil repellat.</span><span>Adipisci alias aliquam aspernatur atque dolorum eaque earum eius est et eveniet hic ipsum iste laborum laudantium magnam, minima molestias nam nemo placeat porro quae quasi quia repellendus sit temporibus!</span><span>A accusantium consectetur culpa, exercitationem facilis fuga fugiat fugit illum magnam neque nisi non odio odit porro, quibusdam, sequi sit? Alias consectetur dicta iusto velit. Cum dicta magni qui voluptatibus!</span><span>Dicta dignissimos eaque eos ex illo ipsa, labore nihil numquam obcaecati praesentium quidem, recusandae reprehenderit tempora ullam vel! Commodi cumque excepturi maxime mollitia neque numquam possimus rerum sequi tenetur. Quia?</span><span>Doloribus eveniet nam nesciunt quod. Aperiam consectetur dolorem in numquam perferendis voluptates. Distinctio, eligendi enim eos expedita explicabo facere officiis quaerat, quia quos rerum, tenetur voluptate voluptatem? Dolorum, obcaecati, optio!</span><span>A aut consequuntur eaque eligendi hic in itaque iure molestiae, nam nesciunt nostrum numquam optio, pariatur perspiciatis ut! Architecto atque debitis eaque laborum reiciendis? Delectus iste nobis quasi reiciendis voluptas.</span><span>Accusamus aspernatur autem consequuntur cum dolor dolorem ea et hic illo impedit iste iure molestias quae qui quidem, sit tenetur! Consectetur fugiat laboriosam maiores natus necessitatibus numquam obcaecati perferendis veniam!</span><span>A animi aperiam assumenda blanditiis corporis culpa delectus eveniet hic iste magnam molestiae molestias, odio quos saepe sit soluta veniam? Dicta eligendi ipsa numquam saepe unde. Autem commodi cum pariatur.</span><span>A consectetur delectus eaque magnam odio officiis pariatur quam quasi voluptatem. Adipisci atque explicabo maxime molestiae nobis. Alias aliquam eaque enim excepturi nesciunt quam, sequi soluta veritatis. Dolorem, rem vero!</span><span>Animi commodi cumque doloremque dolores eum excepturi, impedit molestias reprehenderit tempora tempore ullam vitae voluptatibus. Asperiores at enim, ex laborum modi omnis pariatur quibusdam quisquam ratione rerum saepe, sequi voluptas!</span></p>
-
-        <p>
-            <span class="alert-danger lead">Vous décidez :</span>
-            <form method="POST" action="{{ route('personnage.getItem') }}">
-                @csrf
-                <div class="field pb-3">
-                    <div class="control">
-                        <input type="hidden" class="form-control input" name="nom" id="nom" value="Epée">
-                    </div>
+        @foreach ($items->where('nom', 'Epée') as $item)
+        <form method="POST" action="{{ route('personnage.getItem') }}">
+            @csrf
+            <div class="field pb-3">
+                <div class="control">
+                    <input type="hidden" class="form-control input" name="nom" id="nom" value="{{ $item->nom }}">
                 </div>
-                <div class="field is-grouped">
-                    <div class="control">
-                        <a href="{{ route('tuto.page2') }}" class="btn btn-outline-dark my-4">Choix 1</a>
-                        <a href="{{ route('tuto.page3') }}" class="btn btn-outline-dark my-4">Choix 2</a>
-                        <button class="btn btn-outline-dark my-4" type="submit">Epée</button>
-                    </div>
+                <div class="control">
+                    <input type="hidden" class="form-control input" name="pseudo" id="pseudo" value="{{ $personnage->pseudo }}">
                 </div>
-            </form>
-        </p>
+
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <p>
+                        Vous trouvé une arme ! Vous décider de l'équiper.
+                        <button class="btn btn-link" type="submit">Prendre {{ $item->nom }}</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+        @endforeach
+
+    </div>
 
 @endsection

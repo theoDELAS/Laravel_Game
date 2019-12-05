@@ -44,18 +44,21 @@
                                         </div>
                                         <div class="card-body">
                                             <ul class="list-group list-group-flush mb-3">
-                                                <li class="list-group-item text-center"><i class="fas fa-heart fa-lg pr-3"></i> {{ $classe->hp_max }}</li>
-                                                <li class="list-group-item text-center"><i class="fas fa-gavel fa-lg pr-3"></i>  {{ $classe->degat_max }}</li>
-                                                <li class="list-group-item text-center"><i class="fas fa-shield-alt fa-lg pr-3"></i> {{ $classe->defense_max }}</li>
-                                                <li class="list-group-item text-center"><i class="fas fa-walking fa-lg pr-3"></i> {{ $classe->esquive_max }}</li>
+                                                <li class="list-group-item text-center"><i class="fas fa-heart fa-lg pr-3" style="color: red"></i> {{ $classe->hp }}</li>
+                                                <li class="list-group-item text-center"><i class="fas fa-gavel fa-lg pr-3"></i>  {{ $classe->degats }}</li>
+                                                <li class="list-group-item text-center"><i class="fas fa-shield-alt fa-lg pr-3" style="color: steelblue"></i> {{ $classe->defense }}</li>
+                                                <li class="list-group-item text-center"><i class="fas fa-walking fa-lg pr-3" style="color: darkgreen"></i> {{ $classe->esquive }}</li>
                                             </ul>
-                                            <button class="btn btn-outline-info bottom" type="submit"><i class="fas fa-redo-alt"></i> Histoire</button>
+                                            <button class="btn btn-info bottom text-light" type="submit"><i class="fas fa-redo-alt"></i> Histoire</button>
                                         </div>
                                     </div>
                                     <div class="back">
-                                        <div class="container p-4">
-                                            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, adipisci amet asperiores aspernatur delectus dicta dignissimos dolorem eaque eligendi eum eveniet excepturi explicabo illum nemo nostrum omnis provident qui quia quibusdam quisquam quo rem sed sequi soluta unde, vel vero voluptas? Ab cum dolor earum laudantium, maiores maxime minus nobis non nostrum odit officia perferendis praesentium quasi reprehenderit sed ullam?</p>
-                                            <button class="btn btn-outline-info bottom mx-auto" type="submit"><i class="fas fa-redo-alt"></i> Statistiques</button>
+                                        <div class="card-header">
+                                            <h2>{{ $classe->name }}</h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="text-justify">{{ $classe->histoire }}</p>
+                                            <button class="btn btn-info bottom mx-auto text-light" type="submit"><i class="fas fa-redo-alt"></i> Statistiques</button>
                                         </div>
                                     </div>
                                 </div>

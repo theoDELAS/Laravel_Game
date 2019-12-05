@@ -11133,7 +11133,6 @@ section.custom .flipper.flip .card {
 section.custom .front,
 section.custom .back {
   width: 100%;
-  padding: 5px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: absolute;

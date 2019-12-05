@@ -15,7 +15,7 @@ class Personnage extends Model
      * @var array
      */
     protected $fillable = [
-        'pseudo', 'lvl_perso', 'histoire_completed',
+        'pseudo', 'lvl_perso', 'hp', 'degats', 'defense', 'esquive','histoire_completed',
     ];
 
     /**
