@@ -141,7 +141,6 @@ class PersonnageController extends Controller
      */
     public function destroy(Personnage $personnage)
     {
-        dd($personnage);
         // Supprime le personnage
         $personnage->delete();
         // Supprime la liaison entre le personnage et l'utilisateur à qui il appartient
