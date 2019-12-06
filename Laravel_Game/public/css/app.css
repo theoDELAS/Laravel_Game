@@ -11187,6 +11187,22 @@ section.custom .goback {
   }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-columns {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card-columns {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+}
+
 /*
 *
 * ==========================================

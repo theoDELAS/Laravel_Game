@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Classe;
 use App\Http\Controllers\Controller;
-use App\Personnage;
+use App\Monstre;
 use Exception;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
@@ -13,12 +12,12 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\View\View;
 
-class ClasseController extends Controller
+class MonstresController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return void
+     * @return Response
      */
     public function index()
     {
@@ -32,8 +31,8 @@ class ClasseController extends Controller
      */
     public function create()
     {
-        // retourne ma vue de création de classes
-        return view ('admin.classe.create');
+        // retourne ma vue de création de monstres
+        return view ('admin.monstres.create');
     }
 
     /**
@@ -44,25 +43,23 @@ class ClasseController extends Controller
     public function store()
     {
         // ma requete a besoin de ces valeurs pour etre valide
+
         request()->validate([
             'name' => 'required',
             'hp' => 'required',
             'degats' => 'required',
             'defense' => 'required',
             'esquive' => 'required',
-            'histoire' => 'required',
         ]);
 
-        $classe = Classe::create([
-           'name' => request('name'),
-           'hp' => request('hp'),
-           'degats' => request('degats'),
-           'defense' => request('defense'),
-           'esquive' => request('esquive'),
-           'histoire' => request('histoire'),
+        $monstre = Monstre::create([
+            'name' => request('name'),
+            'hp' => request('hp'),
+            'degats' => request('degats'),
+            'defense' => request('defense'),
+            'esquive' => request('esquive'),
         ]);
-
-        $classe->save();
+        $monstre->save();
 
         return redirect(route('admin.users.index'));
     }
@@ -70,26 +67,26 @@ class ClasseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Classe $classe
+     * @param Monstre $monstre
      * @return Factory|View
      */
-    public function show(Classe $classe)
+    public function show(Monstre $monstre)
     {
-        return view('admin.classe.show')->with([
-            'classe' => $classe,
+        return view('admin.monstres.show')->with([
+            'monstre' => $monstre,
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Classe $classe
+     * @param Monstre $monstre
      * @return Factory|View
      */
-    public function edit(Classe $classe)
+    public function edit(Monstre $monstre)
     {
-        return view('admin.classe.edit')->with([
-            'classe' => $classe,
+        return view('admin.monstres.edit')->with([
+            'monstre' => $monstre,
         ]);
     }
 
@@ -97,19 +94,18 @@ class ClasseController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Classe $classe
-     * @return Response
+     * @param Monstre $monstre
+     * @return RedirectResponse
      */
-    public function update(Request $request, Classe $classe)
+    public function update(Request $request, Monstre $monstre)
     {
-        $classe->name = $request->name;
-        $classe->hp = $request->hp;
-        $classe->degats = $request->degats;
-        $classe->defense = $request->defense;
-        $classe->esquive = $request->esquive;
-        $classe->histoire = $request->histoire;
+        $monstre->name = $request->name;
+        $monstre->hp = $request->hp;
+        $monstre->degats = $request->degats;
+        $monstre->defense = $request->defense;
+        $monstre->esquive = $request->esquive;
 
-        $classe->save();
+        $monstre->save();
 
         return redirect()->route('admin.users.index');
     }
@@ -117,15 +113,13 @@ class ClasseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Classe $classe
-     * @return void
+     * @param Monstre $monstre
+     * @return RedirectResponse
      * @throws Exception
      */
-    public function destroy(Classe $classe)
+    public function destroy(Monstre $monstre)
     {
-        $classe->delete();
-        $classe->personnages()->detach();
-        $classe->personnages()->delete();
+        $monstre->delete();
 
         return redirect()->route('admin.users.index');
     }

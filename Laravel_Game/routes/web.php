@@ -32,5 +32,6 @@ Route::resource('personnage', 'PersonnageController');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function (){
     Route::resource('/users', 'UsersController', ['except' => ['create', 'store']]);
+    Route::resource('/monstres', 'MonstresController');
     Route::resource('/classe', 'ClasseController');
 });

@@ -8,10 +8,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header h3 text-center">Créer une classe</div>
+                    <div class="card-header h3 text-center">Créer un monstre</div>
 
                     <div class="card-body">
-                        <form action="{{ route('admin.classe.store') }}" method="POST">
+                        <form action="{{ route('admin.monstres.store') }}" method="POST">
                             @csrf
                             <ul class="list-group list-group-flush" style="list-style-type:none">
                                 <li class="list-group-item text-center">
@@ -32,10 +32,6 @@
                                 <li class="list-group-item text-center">
                                     <i class="fas fa-walking fa-lg mr-3"></i>
                                     <input id="esquive" name="esquive" type="number" class="form-control text-center mx-auto w-25 d-inline" value="{{ old('esquive') }}" placeholder="Esquive">
-                                </li>
-                                <li class="list-group-item text-center">
-                                    <i class="fas fa-book-open fa-lg mr-3 pt-4 align-top"></i>
-                                    <textarea id="histoire" name="histoire" type="text" class="form-control text-center mx-auto w-25 d-inline" placeholder="Histoire de cette classe">{{ old('histoire') }}</textarea>
                                 </li>
                             </ul>
                             <button type="submit" class="btn btn-success btn-block mt-3 mx-auto">
