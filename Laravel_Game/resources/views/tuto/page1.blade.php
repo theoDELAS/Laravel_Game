@@ -29,7 +29,7 @@
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
                             @foreach($itemsInventaire as $item)
-                                <li class="list-group-item text-center">{{ $item->nom }}</li>
+                                <li class="list-group-item text-center">{{ $item->name }}</li>
                             @endforeach
                         </ul>
                     </div>
@@ -48,12 +48,12 @@
 
 
         <h1 class="text-center">{{ $personnage->pseudo }} arrive Page 1</h1>
-        @foreach ($items->where('nom', 'Casque') as $item)
+        @foreach ($items->where('name', 'Casque') as $item)
         <form method="POST" action="{{ route('personnage.getItem') }}">
             @csrf
             <div class="field pb-3">
                 <div class="control">
-                    <input type="hidden" class="form-control input" name="nom" id="nom" value="{{ $item->nom }}">
+                    <input type="hidden" class="form-control input" name="name" id="name" value="{{ $item->name }}">
                 </div>
                 <div class="control">
                     <input type="hidden" class="form-control input" name="pseudo" id="pseudo" value="{{ $personnage->pseudo }}">
@@ -64,7 +64,7 @@
                 <div class="control">
                     <p>
                         Vous trouvez une arme ! Vous décider de l'équiper.
-                        <button class="btn btn-link" type="submit">Prendre {{ $item->nom }}</button>
+                        <button class="btn btn-link" type="submit">Prendre {{ $item->name }}</button>
                     </p>
                 </div>
             </div>

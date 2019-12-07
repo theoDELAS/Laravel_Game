@@ -8,17 +8,18 @@ use App\Item;
 use App\Personnage;
 use App\User;
 use Exception;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Gate;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class PersonnageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return Factory|View
      */
     public function index()
     {
@@ -29,7 +30,7 @@ class PersonnageController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return Factory|View
      */
     public function create()
     {
@@ -43,7 +44,6 @@ class PersonnageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
      * @return Response
      */
     public function store()
@@ -167,7 +167,7 @@ class PersonnageController extends Controller
 
     public function getItem() {
         $personnage = Personnage::get()->where('pseudo', request('pseudo'))->first();
-        $item = Item::get()->where('nom', request('nom'))->first();
+        $item = Item::get()->where('name', request('name'))->first();
         $inventaire = Inventaire::get()->last();
 
 

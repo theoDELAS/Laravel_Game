@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Classe;
 use App\Http\Controllers\Controller;
+use App\Item;
 use App\Monstre;
 use App\Personnage;
 use App\User;
@@ -41,10 +42,12 @@ class UsersController extends Controller
         $users = User::all();
         $classes = Classe::all();
         $monstres = Monstre::all();
+        $items = Item::all();
         return view('admin.users.index')->with([
             'users' => $users,
             'classes' => $classes,
             'monstres' => $monstres,
+            'items' => $items,
         ]);
     }
 

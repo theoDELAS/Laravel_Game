@@ -15,27 +15,30 @@ class ItemsTableSeeder extends Seeder
         Item::truncate();
 
         Item::create([
-            'nom' => 'Epée',
+            'name' => 'Epée',
             'quantite' => 1,
             'degats' => 15,
             'defense' => 0,
             'hp' => 0,
+            'esquive' => 0,
         ]);
 
         Item::create([
-            'nom' => 'Bouclier',
+            'name' => 'Bouclier',
             'quantite' => 1,
             'degats' => 0,
             'defense' => 10,
             'hp' => 5,
+            'esquive' => 3,
         ]);
 
         Item::create([
-            'nom' => 'Casque',
+            'name' => 'Casque',
             'quantite' => 1,
             'degats' => 0,
             'defense' => 7,
             'hp' => 5,
+            'esquive' => 1,
         ]);
     }
 }

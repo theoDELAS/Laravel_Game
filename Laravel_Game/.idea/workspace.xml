@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4678b5-5e4f-4502-8404-4302faefc525" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/monstres/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/monstres/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/monstres/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel_Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel_Game.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/items/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/items/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/items/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ClasseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ClasseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MonstreController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Monstre.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Monstre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_05_110027_create_monstres_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_05_110027_create_monstres_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/MonstresTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MonstresTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_164057_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_164057_create_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ItemsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ItemsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/classe/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/classe/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/classe/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/classe/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/classe/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/classe/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/page1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/page1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,20 +148,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/monstres" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/items" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\admin\items" />
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\admin\monstres" />
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
+      <recent name="C:\Users\theod\Desktop\Ynov\2iemeAnnee\PROJETS\Laravel_Game\resources\views\admin\users" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\app\Http\Controllers\Admin" />
       <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\personnages" />
       <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\admin\monstres" />
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
-      <recent name="C:\Users\theod\Desktop\Ynov\2iemeAnnee\PROJETS\Laravel_Game\resources\views\admin\users" />
     </key>
   </component>
   <component name="RunManager">
@@ -221,7 +217,9 @@
       <workItem from="1575663209155" duration="49000" />
       <workItem from="1575663298590" duration="25000" />
       <workItem from="1575663390820" duration="19000" />
-      <workItem from="1575663423993" duration="4733000" />
+      <workItem from="1575663423993" duration="5533000" />
+      <workItem from="1575723900263" duration="40000" />
+      <workItem from="1575730733307" duration="2086000" />
     </task>
     <servers />
   </component>
@@ -246,13 +244,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575663407094" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575667535126">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575731673986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575731673986" />
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575667535126" />
-    <state x="656" y="257" width="607" height="526" key="find.popup" timestamp="1575665222746">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1575723937223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575723937223" />
+    <state x="656" y="257" width="607" height="526" key="find.popup" timestamp="1575731194907">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="257" width="607" height="526" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575731194907" />
     <state x="656" y="257" width="607" height="526" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1575665222746" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575731371837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575731371837" />
   </component>
 </project>
