@@ -1,4 +1,4 @@
-@extends ('tuto.appTuto')
+@extends ('layouts.appGame')
 
 @section('content')
     <!-- Import  de script pour le side menu -->

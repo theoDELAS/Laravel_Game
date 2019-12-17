@@ -24,7 +24,7 @@ Route::get('tuto/introduction', 'TutoController@index')->name('introduction');
 Route::get('tuto/page1', 'TutoController@page1')->name('tuto.page1');
 Route::get('tuto/page2', 'TutoController@page2')->name('tuto.page2');
 Route::post('tuto/getItem', 'PersonnageController@getItem')->name('personnage.getItem');
-Route::get('tuto/page3', 'TutoController@page3')->name('tuto.page3');
+Route::post('tuto/lancerCombat', 'PersonnageController@lancerCombat')->name('personnage.lancerCombat');
 
 
 Route::resource('personnage', 'PersonnageController');

@@ -10,6 +10,10 @@
     <title>Laravel Game</title>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -78,6 +82,44 @@
                 </div>
             </div>
         </nav>
+
+{{--            Vertical HUD--}}
+        @if (Auth::user()->personnages->first()->pseudo)
+        <div class="container">
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4 mt-5"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">{{ $personnage->pseudo }}</small></button>
+
+            <div class="vertical-nav bg-white" id="sidebar">
+                <div class="card mt-5 mb-3">
+                    <div class="card-header">
+                        <h2 class="text-center">{{ $personnage->pseudo }}</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-center"><i class="fas fa-heart mr-3"></i> {{ $personnage->hp_current }}/{{ $personnage->hp_max }}</li>
+                            <li class="list-group-item text-center"><i class="fas fa-gavel mr-3"></i>  {{ $personnage->degats_current }}</li>
+                            <li class="list-group-item text-center"><i class="fas fa-shield-alt mr-3"></i> {{ $personnage->defense_current }}</li>
+                            <li class="list-group-item text-center"><i class="fas fa-walking mr-3"></i> {{ $personnage->esquive_current }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="card mt-5 mb-3">
+                        <div class="card-header">
+                            <h2 class="text-center">Inventaire</h2>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                @foreach($itemsInventaire as $item)
+                                    <li class="list-group-item text-center">{{ $item->name }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End vertical HUD -->
+        @endif
 
         <main class="container py-4">
             @yield('content')

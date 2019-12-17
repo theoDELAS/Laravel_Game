@@ -18,10 +18,10 @@
                             <div class="card-body">
                                 <h3 class="text-center">{{ $classe->name }}</h3>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item text-center"><i class="fas fa-heart"></i> {{ $classe->hp }}</li>
-                                    <li class="list-group-item text-center"><i class="fas fa-gavel"></i>  {{ $classe->degats }}</li>
-                                    <li class="list-group-item text-center"><i class="fas fa-shield-alt"></i> {{ $classe->defense }}</li>
-                                    <li class="list-group-item text-center"><i class="fas fa-walking"></i> {{ $classe->esquive }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-heart"></i> {{ $personnage->hp_current }}/{{ $personnage->hp_max }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-gavel"></i>  {{ $personnage->degats_current }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-shield-alt"></i> {{ $personnage->defense_current }}</li>
+                                    <li class="list-group-item text-center"><i class="fas fa-walking"></i> {{ $personnage->esquive_current }}</li>
                                 </ul>
                             </div>
 

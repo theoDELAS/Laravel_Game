@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Classe;
 use App\Inventaire;
 use App\Item;
+use App\Monstre;
 use App\Personnage;
 use App\User;
 use Exception;
@@ -62,13 +63,21 @@ class PersonnageController extends Controller
             // un personnage a complété 0 histoire à la création
             'histoire_completed' => 0,
             // a le nombre de hp de base de sa classe
-            'hp' => $classe->hp,
+            'hp_base' => $classe->hp,
+            'hp_current' => $classe->hp,
+            'hp_max' => $classe->hp,
             // a le nombre de degats de base de sa classe
-            'degats' => $classe->degats,
+            'degats_base' => $classe->degats,
+            'degats_current' => $classe->degats,
+            'degats_max' => $classe->degats,
             // a le nombre de defense de base de sa classe
-            'defense' => $classe->defense,
+            'defense_base' => $classe->defense,
+            'defense_current' => $classe->defense,
+            'defense_max' => $classe->defense,
             // a le nombre d'esquive de base de sa classe
-            'esquive' => $classe->esquive,
+            'esquive_base' => $classe->esquive,
+            'esquive_current' => $classe->esquive,
+            'esquive_max' => $classe->esquive,
         ]);
 
         // Crée un inventaire
@@ -170,16 +179,18 @@ class PersonnageController extends Controller
         $item = Item::get()->where('name', request('name'))->first();
         $inventaire = Inventaire::get()->last();
 
-
         $persoInventaire = $personnage->inventaire()->get()->first();
         $itemsInventaire = $persoInventaire->items()->get()->all();
 
-
         $personnage->update([
-            'hp' => ($personnage->hp +  $item->hp),
-            'degats' => ($personnage->degats +  $item->degats),
-            'defense' => ($personnage->defense +  $item->defense),
-            'esquive' => ($personnage->esquive +  $item->esquive),
+            'hp_current' => ($personnage->hp_current +  $item->hp),
+            'hp_max' => ($personnage->hp_max +  $item->hp),
+            'degats_current' => ($personnage->degats_current +  $item->degats),
+            'degats_max' => ($personnage->degats_max +  $item->degats),
+            'defense_current' => ($personnage->defense_current +  $item->defense),
+            'defense_max' => ($personnage->defense_max +  $item->defense),
+            'esquive_current' => ($personnage->esquive_current +  $item->esquive),
+            'esquive_max' => ($personnage->esquive_max +  $item->esquive),
         ]);
 
         $inventaire->update([
@@ -193,6 +204,24 @@ class PersonnageController extends Controller
             'success' => 'Objet équipé. Vos statistiques vienne d\'être modifiées',
             'itemsInventaire' => $itemsInventaire
         ]);
+    }
 
+    public function lancerCombat()
+    {
+        $monstre = Monstre::get()->where('name', request('name'))->first();
+        $personnage = Personnage::get()->where('pseudo', request('pseudo'))->first();
+        if ($personnage->defense_current < $monstre->degats)
+        {
+            $personnage->update([
+                'hp_current' => $personnage->hp_current - $monstre->degats
+        ]);
+        }
+
+
+        if ($personnage->hp_current <= 0)
+        {
+            return "game over";
+        }
+        return redirect()->back();
     }
 }

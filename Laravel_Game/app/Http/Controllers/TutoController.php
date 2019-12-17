@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Classe;
 use App\Item;
+use App\Monstre;
 use App\Personnage;
 use App\Role;
 use App\User;
@@ -45,15 +46,16 @@ class TutoController extends Controller
         $this->isFirstRedirect();
 
         $personnage = Personnage::get()->last();
-        return view('tuto.page2')->with('personnage', $personnage);
-    }
-
-    public function page3()
-    {
-        $this->isFirstRedirect();
-
-        $personnage = Personnage::get()->last();
-        return view('tuto.page3')->with('personnage', $personnage);
+        $items = Item::all();
+        $monstres = Monstre::all();
+        $persoInventaire = $personnage->inventaire()->get()->first();
+        $itemsInventaire = $persoInventaire->items()->get()->all();
+        return view('tuto.page2')->with([
+            'personnage'=> $personnage,
+            'items' => $items,
+            'itemsInventaire' => $itemsInventaire,
+            'monstres' => $monstres,
+        ]);
     }
 
     public function passerTuto(User $user) {

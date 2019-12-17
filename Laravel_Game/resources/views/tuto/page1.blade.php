@@ -1,52 +1,10 @@
-@extends('tuto.appTuto')
+@extends('layouts.appGame')
 
 @section('content')
     @error('success')
         <p class="alert alert-success">{{ $message }}</p>
     @enderror
     <div class="container lead">
-        <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">{{ $personnage->pseudo }}</small></button>
-
-        <div class="vertical-nav bg-white" id="sidebar">
-            <div class="card mt-5 mb-3">
-                <div class="card-header">
-                    <h2 class="text-center">{{ $personnage->pseudo }}</h2>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-center"><i class="fas fa-heart mr-3"></i> {{ $personnage->hp }}/{{ $personnage->hp }}</li>
-                        <li class="list-group-item text-center"><i class="fas fa-gavel mr-3"></i>  {{ $personnage->degats }}</li>
-                        <li class="list-group-item text-center"><i class="fas fa-shield-alt mr-3"></i> {{ $personnage->defense }}</li>
-                        <li class="list-group-item text-center"><i class="fas fa-walking mr-3"></i> {{ $personnage->esquive }}</li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="card mt-5 mb-3">
-                    <div class="card-header">
-                        <h2 class="text-center">Inventaire</h2>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            @foreach($itemsInventaire as $item)
-                                <li class="list-group-item text-center">{{ $item->name }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End vertical navbar -->
-
-
-
-
-
-
-
-
-
-
         <h1 class="text-center">{{ $personnage->pseudo }} arrive Page 1</h1>
         @foreach ($items->where('name', 'Casque') as $item)
         <form method="POST" action="{{ route('personnage.getItem') }}">
@@ -73,8 +31,8 @@
         <div>
             <p>
                 Vous décidez de vous diriger vers :
-                <a class="btn btn-outline-info" href="{{ route('tuto.page2') }}">Page 2</a>
-                <a class="btn btn-outline-info" href="{{ route('tuto.page3') }}">Page 3</a>
+                <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}">Page 2</a>
+{{--                <a class="btn btn-outline-info" href="{{ route('tuto.page3') }}">Page 3</a>--}}
             </p>
         </div>
     </div>
