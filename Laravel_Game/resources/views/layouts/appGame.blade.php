@@ -84,7 +84,7 @@
         </nav>
 
 {{--            Vertical HUD--}}
-        @if (Auth::user()->personnages->first()->pseudo)
+        @if (!empty(Auth::user()->personnages->first()->pseudo))
         <div class="container">
             <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4 mt-5"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">{{ $personnage->pseudo }}</small></button>
 

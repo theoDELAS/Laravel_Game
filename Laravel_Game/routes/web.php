@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('passer/{user}', 'TutoController@passerTuto')->name('passer');
+Route::get('tuto/presentation', 'TutoController@presentation')->name('presentation');
 Route::get('tuto/introduction', 'TutoController@index')->name('introduction');
 Route::get('tuto/page1', 'TutoController@page1')->name('tuto.page1');
 Route::get('tuto/page2', 'TutoController@page2')->name('tuto.page2');
