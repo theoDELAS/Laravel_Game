@@ -5,6 +5,7 @@
         <p class="alert alert-success">{{ $message }}</p>
     @enderror
     <div class="container lead">
+        <h1 class="text-center">{{ $personnage->pseudo }} découvre la taverne.</h1>
         <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">{{ $personnage->pseudo }}</small></button>
 
         <div class="vertical-nav bg-white" id="sidebar">
@@ -47,7 +48,7 @@
 
 
 
-        <h1 class="text-center">{{ $personnage->pseudo }} arrive Page 1</h1>
+        <h1 class="text-center">L'épopée de {{ $personnage->pseudo }}</h1>
         @foreach ($items->where('name', 'Casque') as $item)
         <form method="POST" action="{{ route('personnage.getItem') }}">
             @csrf
@@ -63,11 +64,21 @@
             <div class="field is-grouped">
                 <div class="control">
                     <p>
-                        Après plusieurs jours de voyage, vous apercevez la première taverne depuis votre départ. Elle ressemble plus à une cabane abandonée et mal fréquentée, mais honnêtement ça sera toujours mieux que les nuits que vous avez passées dehors.
+                        Après plusieurs jours de voyage, vous apercevez la première taverne depuis votre départ. Elle ressemble plus à une cabane abandonnée et mal fréquentée,
+                        mais honnêtement ça sera toujours mieux que les nuits que vous avez passées dehors.
                         Vous ne vous doutiez pas que votre voyage serait aussi rude, vos ressources sont épuisées et votre nécessaire de campement en piteux état.
-                        Voilà maintenant
-                        Vous trouvez une arme ! Vous décider de l'équiper.
-                        <button class="btn btn-link" type="submit">Prendre {{ $item->name }}</button>
+                        De la lumière vous parvient de la taverne. En vous approchant, vous distinguez quelques barriques ainsi qu'un abri pour le bois de la cheminée.
+                        L'une des vitres, cassée, vous permet d'entendre ce que vous pensez être les propriétaires des deux chevaux attachés à la barrière.
+                        Les nombreuses sacoches encore arnachées aux chevaux vous alertent, qui laisserait ses affaires sur son cheval alors qu'il est dans une taverne ?
+                        A quelques pas de la taverne, les voix se font plus distinctes :
+                        - Tu penses qu'on aura la place sur nos chevaux ?
+                        - On peut toujours faire plusieurs trajets, personne ne voudra mettre les pieds dans cette taverne perdue au milieu de nul part.
+                        - D'accord, on le laisse en vie ?
+                        - On verra, je ne pense pas qu'il le sera à notre retour.
+                        Suite à cette discussion que vous avez surpise, que décidez vous ?
+
+
+
                     </p>
                 </div>
             </div>
@@ -75,9 +86,8 @@
         @endforeach
         <div>
             <p>
-                Vous décidez de vous diriger vers :
-                <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}">Page 2</a>
-{{--                <a class="btn btn-outline-info" href="{{ route('tuto.page3') }}">Page 3</a>--}}
+                <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}">Libérer les chevaux pour les attirer à l'extérieur.</a>
+                <a class="btn btn-outline-info" href="{{ route('tuto.page3') }}">Entrer dans la taverne subtilement</a>
             </p>
         </div>
     </div>
