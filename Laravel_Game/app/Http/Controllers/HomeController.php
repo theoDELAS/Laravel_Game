@@ -18,6 +18,14 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+
+    public function presentation()
+    {
+
+        return view('presentation')->with([
+        ]);
+    }
+
     /**
      * Show the application dashboard.
      *

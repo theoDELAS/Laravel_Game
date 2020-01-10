@@ -26,14 +26,6 @@ class TutoController extends Controller
         ]);
     }
 
-    public function presentation()
-    {
-        $this->isFirstRedirect();
-
-        return view('presentation')->with([
-        ]);
-    }
-
     public function page1()
     {
         $this->isFirstRedirect();
