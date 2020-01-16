@@ -11,6 +11,7 @@ use App\User;
 use Faker\Provider\Person;
 use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TutoController extends Controller
 {
