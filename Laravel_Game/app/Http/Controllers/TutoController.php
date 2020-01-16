@@ -59,6 +59,40 @@ class TutoController extends Controller
         ]);
     }
 
+    public function page3()
+    {
+        $this->isFirstRedirect();
+
+        $personnage = Personnage::get()->last();
+        $items = Item::all();
+        $monstres = Monstre::all();
+        $persoInventaire = $personnage->inventaire()->get()->first();
+        $itemsInventaire = $persoInventaire->items()->get()->all();
+        return view('tuto.page3')->with([
+            'personnage'=> $personnage,
+            'items' => $items,
+            'itemsInventaire' => $itemsInventaire,
+            'monstres' => $monstres,
+        ]);
+    }
+
+    public function page4()
+    {
+        $this->isFirstRedirect();
+
+        $personnage = Personnage::get()->last();
+        $items = Item::all();
+        $monstres = Monstre::all();
+        $persoInventaire = $personnage->inventaire()->get()->first();
+        $itemsInventaire = $persoInventaire->items()->get()->all();
+        return view('tuto.page4')->with([
+            'personnage'=> $personnage,
+            'items' => $items,
+            'itemsInventaire' => $itemsInventaire,
+            'monstres' => $monstres,
+        ]);
+    }
+
     public function passerTuto(User $user) {
         $userRole = Role::where('name', 'user')->first();
         // enleve le role de l'user
