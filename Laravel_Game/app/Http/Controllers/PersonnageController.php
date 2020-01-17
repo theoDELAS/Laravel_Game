@@ -114,7 +114,7 @@ class PersonnageController extends Controller
         // Selectionne tous les users
         $users = User::all();
         // redirige vers la page 1 du tuto avec comme parametres mes users stockés dans la variable $users avec comme mot clé 'users'
-        return redirect('tuto/page1')->with('users', $users);
+        return redirect('tuto/debut')->with('users', $users);
     }
 
     /**

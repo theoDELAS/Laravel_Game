@@ -27,7 +27,7 @@ class TutoController extends Controller
         ]);
     }
 
-    public function page1()
+    public function debut()
     {
         $this->isFirstRedirect();
 
@@ -35,14 +35,14 @@ class TutoController extends Controller
         $items = Item::all();
         $persoInventaire = $personnage->inventaire()->get()->first();
         $itemsInventaire = $persoInventaire->items()->get()->all();
-        return view('tuto.page1')->with([
+        return view('tuto.debut')->with([
             'personnage'=> $personnage,
             'items' => $items,
             'itemsInventaire' => $itemsInventaire,
         ]);
     }
 
-    public function page2()
+    public function combatChevaux()
     {
         $this->isFirstRedirect();
 
@@ -51,24 +51,7 @@ class TutoController extends Controller
         $monstres = Monstre::all();
         $persoInventaire = $personnage->inventaire()->get()->first();
         $itemsInventaire = $persoInventaire->items()->get()->all();
-        return view('tuto.page2')->with([
-            'personnage'=> $personnage,
-            'items' => $items,
-            'itemsInventaire' => $itemsInventaire,
-            'monstres' => $monstres,
-        ]);
-    }
-
-    public function page3()
-    {
-        $this->isFirstRedirect();
-
-        $personnage = Personnage::get()->last();
-        $items = Item::all();
-        $monstres = Monstre::all();
-        $persoInventaire = $personnage->inventaire()->get()->first();
-        $itemsInventaire = $persoInventaire->items()->get()->all();
-        return view('tuto.page3')->with([
+        return view('tuto.combatChevaux')->with([
             'personnage'=> $personnage,
             'items' => $items,
             'itemsInventaire' => $itemsInventaire,
@@ -76,7 +59,7 @@ class TutoController extends Controller
         ]);
     }
 
-    public function page4()
+    public function combatSneaky()
     {
         $this->isFirstRedirect();
 
@@ -85,7 +68,24 @@ class TutoController extends Controller
         $monstres = Monstre::all();
         $persoInventaire = $personnage->inventaire()->get()->first();
         $itemsInventaire = $persoInventaire->items()->get()->all();
-        return view('tuto.page4')->with([
+        return view('tuto.combatSneaky')->with([
+            'personnage'=> $personnage,
+            'items' => $items,
+            'itemsInventaire' => $itemsInventaire,
+            'monstres' => $monstres,
+        ]);
+    }
+
+    public function fin()
+    {
+        $this->isFirstRedirect();
+
+        $personnage = Personnage::get()->last();
+        $items = Item::all();
+        $monstres = Monstre::all();
+        $persoInventaire = $personnage->inventaire()->get()->first();
+        $itemsInventaire = $persoInventaire->items()->get()->all();
+        return view('tuto.fin')->with([
             'personnage'=> $personnage,
             'items' => $items,
             'itemsInventaire' => $itemsInventaire,

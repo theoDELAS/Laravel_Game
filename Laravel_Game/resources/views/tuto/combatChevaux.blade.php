@@ -40,7 +40,7 @@
     @endforeach
     <div>
         <p>
-            <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page5') }}"> <img src="{{ asset("storage/images/book.png") }}"> Allez libérer le tavernier.</a>
+            <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.fin') }}"> <img src="{{ asset("storage/images/book.png") }}"> Allez libérer le tavernier.</a>
         </p>
     </div>
 @endsection

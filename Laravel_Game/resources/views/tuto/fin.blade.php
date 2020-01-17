@@ -38,7 +38,7 @@
     @endforeach
     <div>
         <p>
-        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/closedBook.png") }}"> Fin du tutoriel.</a>
+        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('choixHistoire') }}"> <img src="{{ asset("storage/images/closedBook.png") }}"> Fin du tutoriel.</a>
         </p>
     </div>
 @endsection
