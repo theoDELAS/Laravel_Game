@@ -51,7 +51,7 @@
                         - On verra, je ne pense pas qu'il le sera à notre retour.
                     </p>
                     <p>
-                        Suite à cette discussion que vous avez surpise, que décidez vous ?
+                        Suite à cette discussion que vous avez surprise, que décidez vous ?
                     </p>
                 </div>
             </div>
@@ -59,8 +59,8 @@
         @endforeach
         <div>
             <p>
-                <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page3') }}"> <img src="{{ asset("storage/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
-                <a class="btn btn-outline-info" href="{{ route('tuto.page4') }}"> <img src="{{ asset("storage/images/book.png") }}"> Entrer dans la taverne subtilement</a>
+            <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("ressources/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
+            <a class="btn btn-outline-info" href="{{ route('tuto.page2') }}"> <img src="{{ asset("ressources/images/book.png") }}"> Entrer dans la taverne subtilement</a>
             </p>
         </div>
 @endsection

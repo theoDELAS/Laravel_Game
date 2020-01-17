@@ -19,7 +19,7 @@
             </div>
             <div class="field is-grouped">
                 <div class="control">
-                    {!! nl2br("VERSION CHEVAUX
+                    {!! nl2br("
                    Vous vous approchez minutieusement des chevaux et détachez leur lanière les reliants à leur point d'ancrage, suite à quoi vous les faites fuir
                    avec une tape sur la croupe.
                    Vous partez vous cacher derrière les barriques en attendant que les hommes sortent.
@@ -40,8 +40,8 @@
     @endforeach
     <div>
         <p>
-            <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
-            <a class="btn btn-outline-info" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/book.png") }}"> Entrer dans la taverne subtilement</a>
+        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("ressources/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
+            <a class="btn btn-outline-info" href="{{ route('tuto.page2') }}"> <img src="{{ asset("ressources/images/book.png") }}"> Entrer dans la taverne subtilement</a>
         </p>
     </div>
 @endsection

@@ -20,16 +20,10 @@
             <div class="field is-grouped">
                 <div class="control">
                     {!! nl2br("
-                   Vous entrez furtivement dans la taverne, les deux homes ne vous ont pas remarqué, ils sont trop occupés à ramasser leur butin.
-                   Vous entendez ce que vous pensez être le patron de la taverne bailloné et ligoté derrière le comptoir.
-                   Un des hommes tire un des cadavres jonchant le sol en reculant vers vous.
-                   Vous vous saisissez de votre dague et vous le poignardez.
-                   L'homme meurt sur le coup, sans avoir pu se défendre.
-                   Le bruit du cadavre tombant sur le sol alerta son camarade.
-                   L'homme se retourne et s'écrie:
-                   - Viens ici que je te bute enculé !
-
-                   COMBAT
+                    À la suite de ce combat victorieux vous vous dirigez vers le tavernier, que vous retrouvez séquestré, bailloné, ligoté.
+                    Vous le détachez et l'aidez à s'asseoir, en attendant qu'il reprenne ses esprits vous allez cherchez une cruche d'eau.
+                    En arrivant devant lui il vous adresse ces quelques mots:
+                    -Merci de votre aide aventurier,
 
                    ") !!}
                 </div>
@@ -38,7 +32,7 @@
     @endforeach
     <div>
         <p>
-        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("ressources/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
+            <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("ressources/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
             <a class="btn btn-outline-info" href="{{ route('tuto.page2') }}"> <img src="{{ asset("ressources/images/book.png") }}"> Entrer dans la taverne subtilement</a>
         </p>
     </div>
