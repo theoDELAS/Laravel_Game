@@ -23,7 +23,7 @@
                     À la suite de ce combat victorieux vous vous dirigez vers le tavernier, que vous retrouvez séquestré, bailloné, ligoté.
                     Vous le détachez et l'aidez à s'asseoir, en attendant qu'il reprenne ses esprits vous allez cherchez une cruche d'eau.
                     En arrivant devant lui il vous adresse ces quelques mots:
-                    -Merci de votre aide aventurier, sans vous je serais mort à l'heure qu'il est. 
+                    -Merci de votre aide aventurier, sans vous je serais mort à l'heure qu'il est.
                     -Que vous voulez ces brigands?
                     -Sûrement récupérer mes maigres profits des 3 derniers mois que je n'ai pas encore pu mettre en sécurité.
                     -Il ne devrait plus vous importuner maintenant.
@@ -38,8 +38,7 @@
     @endforeach
     <div>
         <p>
-        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
-            <a class="btn btn-outline-info" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/book.png") }}"> Entrer dans la taverne subtilement</a>
+        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/closedBook.png") }}"> Fin du tutoriel.</a>
         </p>
     </div>
 @endsection

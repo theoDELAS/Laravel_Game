@@ -40,8 +40,7 @@
     @endforeach
     <div>
         <p>
-        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/book.png") }}"> Libérer les chevaux pour les attirer à l'extérieur.</a>
-            <a class="btn btn-outline-info" href="{{ route('tuto.page2') }}"> <img src="{{ asset("storage/images/book.png") }}"> Entrer dans la taverne subtilement</a>
+            <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('tuto.page5') }}"> <img src="{{ asset("storage/images/book.png") }}"> Allez libérer le tavernier.</a>
         </p>
     </div>
 @endsection
