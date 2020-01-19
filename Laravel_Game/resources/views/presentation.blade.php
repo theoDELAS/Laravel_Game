@@ -11,13 +11,16 @@
             <br>
                 <ul>
                     <li>
-                        <img src="{{ asset("storage/images/book.png") }}"> Cette icône représente un changement de page.
+                        <i class="fas fa-book fa-2x mr-2 my-2"></i>
+                        Cette icône représente un changement de page.
                     </li>
                     <li>
-                        <img src="{{ asset("storage/images/sword.png") }}"> Cette icône représente la possibilité de récupérer une arme.
+                        <i class="fas fa-gavel fa-2x mr-2 my-2"></i>
+                        Cette icône représente la possibilité de récupérer une arme.
                     </li>
                     <li>
-                        <img src="{{ asset("storage/images/backpack.png") }}"> Cette icône représente la possibilité de récupérer un équipement.
+                        <i class="fas fa-gift fa-2x mr-2 my-2"></i>
+                        Cette icône représente la possibilité de récupérer un équipement.
                     </li>
                 </ul>
             <br>
@@ -27,5 +30,5 @@
         </div>
     <br>
     </div>
-    <a href="/tuto/introduction" class="btn btn-primary btn-block my-4 mx-auto">Commencer votre aventure</a>
+        <a href="{{ route('introduction') }}" class="btn btn-primary btn-block my-4 mx-auto">Commencer votre aventure</a>
 @endsection

@@ -1,15 +1,8 @@
 @extends('layouts.appGame')
 
 @section('content')
-    @error('success')
-    <p class="alert alert-success">{{ $message }}</p>
-    @enderror
-    <h1 class="text-center">L'épopée de {{ $personnage->pseudo }}</h1>
-        {{ $classePerso = (Auth::user()->personnages()->get()->first()->classe) }}
-        @foreach($classePerso as $attribut)
-            
-        @endforeach
-        @foreach ($items->where('name', 'Casque') as $item)
+    @foreach($classesPerso as $classe)
+        @foreach ($items->where('name', $arme) as $item)
             <form method="POST" action="{{ route('personnage.getItem') }}">
                 @csrf
                 <div class="field pb-3">
@@ -26,19 +19,23 @@
                         -Que vous voulez ces brigands?
                         -Sûrement récupérer mes maigres profits des 3 derniers mois que je n'ai pas encore pu mettre en sécurité.
                         -Il ne devrait plus vous importuner maintenant.
-                        -Pour vous remercier, vous pouvez passer la nuit dans ma taverne. Le dernier aventurier qui est passé ici n'avait pas de quoi payer ça nuit, il m'a donc laisser son, prenez la, elle vous sera plus utile qu'à moi.
+                        -Pour vous remercier, vous pouvez passer la nuit dans ma taverne. Le dernier aventurier qui est passé ici n'avait pas de quoi payer ça nuit, il m'a donc laisser son arme, prenez la, elle vous sera plus utile qu'à moi.
 
                         Après cette nuit à la taverne, vous remerciez le géreant de cette dernière et vous partez en direction de votre prochaine aventure.
 
                        ") !!}
-                        <button class="btn btn-link" type="submit">Prendre {{ $item->name }}</button>
+                        @if (empty($itemsInventaire))
+                            <button class="btn btn-outline-success" type="submit">
+                                <i class="fas fa-gift fa-2x mr-2 my-2"></i>
+                                Prendre {{ $item->name }}
+                            </button>
+                        @endif
                     </div>
                 </div>
             </form>
         @endforeach
-    <div>
-        <p>
-        <a class="btn btn btn-outline-info w-25 my-4 mx-auto" href="{{ route('passer', ['user'=> auth()->user()->id]) }}"> <img src="{{ asset("storage/images/closedBook.png") }}"> Fin du tutoriel.</a>
-        </p>
-    </div>
+    @endforeach
+    @section('buttons')
+            <a class="btn btn btn-outline-primary w-25 my-4 mx-auto" href="{{ route('passer', ['user'=> auth()->user()->id]) }}"><i class="fas fa-book fa-2x mr-2 my-2"></i>Fin du tutoriel.</a>
+    @endsection
 @endsection

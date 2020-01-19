@@ -200,10 +200,10 @@ class PersonnageController extends Controller
 
         $inventaire->items()->attach($item);
 
-        return redirect()->back()->withErrors([
-            'success' => 'Objet équipé. Vos statistiques vienne d\'être modifiées',
-            'itemsInventaire' => $itemsInventaire
-        ]);
+        $msg = [
+            'success' => 'Objet équipé. Vos statistiques viennent d\'être modifiées'
+        ];
+        return redirect()->back()->with($msg);
     }
 
     public function lancerCombat()
@@ -223,6 +223,7 @@ class PersonnageController extends Controller
         $personnage = Personnage::get()->where('pseudo', request('pseudo'))->first();
 
         $nbTours = 1;
+        $win = false;
         // Boucle du combat, chaque tour le personnage et le monstre se donne 1 coup
         while ($personnage->hp_current > 0 && $newMob->hp > 0 )
         {
@@ -254,6 +255,7 @@ class PersonnageController extends Controller
         elseif ($newMob->hp <= 0)
         {
             $newMob->delete();
+            $win = true;
             $msg = [
                 'success' => 'Vous avez vaincu votre adversaire. Il vous reste ' . $personnage->hp_current . '/' . $personnage->hp_max . ' PV. Vous avez gagné en ' . $nbTours . ' tours'
             ];

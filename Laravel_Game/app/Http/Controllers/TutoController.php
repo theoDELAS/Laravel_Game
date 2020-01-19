@@ -85,11 +85,26 @@ class TutoController extends Controller
         $monstres = Monstre::all();
         $persoInventaire = $personnage->inventaire()->get()->first();
         $itemsInventaire = $persoInventaire->items()->get()->all();
+        $classesPerso = (Auth::user()->personnages()->get()->first()->classe);
+        if ($classesPerso[0]->name == "Mage")
+        {
+            $arme = "Baton";
+        }
+        elseif ($classesPerso[0]->name == "Guerrier")
+        {
+            $arme = "Epée";
+        }
+        else
+        {
+            $arme = "Arc";
+        }
         return view('tuto.fin')->with([
             'personnage'=> $personnage,
             'items' => $items,
             'itemsInventaire' => $itemsInventaire,
             'monstres' => $monstres,
+            'classesPerso' => $classesPerso,
+            'arme' => $arme
         ]);
     }
 

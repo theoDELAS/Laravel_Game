@@ -126,15 +126,29 @@
                     </div>
                 </div>
 
-                <div id="main">
-                    <main class="container py-4">
-                        <button onclick="openNav()" class="openbtn btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4 mt-5"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">{{ $personnage->pseudo }}</small></button>
-                        @yield('content')
-                        <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}" class="btn btn-danger btn-block mx-auto">Passer le tuto</a>
-                    </main>
-                </div>
+            <div id="main">
+                <main class="container py-4 lead">
+                    @if (Session::has('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{Session::get('success')}}
+                        </div>
+                    @elseif (Session::has('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{Session::get('error')}}
+                        </div>
+                    @endif
+                    <button onclick="openNav()" class="openbtn btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4 mt-5"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">{{ $personnage->pseudo }}</small></button>
+                    <h1 class="text-center">L'épopée de {{ $personnage->pseudo }}</h1>
+                    @yield('content')
+                    <p class="my-5 text-center">
+                        @yield('buttons')
+                    </p>
+                    <a href="{{ route('passer', ['user'=> auth()->user()->id]) }}" class="btn btn-danger btn-block mx-auto">Passer le tuto</a>
+                </main>
+            </div>
             <!-- End vertical HUD -->
             @endif
+
 
 
             @if (is_null(Auth::user()->personnages->first()))
