@@ -3,12 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="af4678b5-5e4f-4502-8404-4302faefc525" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonnageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/appGame.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/appGame.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Monstre.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Monstre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ItemsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ItemsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/MonstresTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MonstresTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/choixHistoire.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/choixHistoire.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/presentation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/presentation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/combatChevaux.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/combatChevaux.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/fin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/fin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,17 +153,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\layouts" />
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\app\Http\Controllers\Admin" />
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\personnages" />
-      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\admin\items" />
       <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\admin\monstres" />
       <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
       <recent name="C:\Users\theod\Desktop\Ynov\2iemeAnnee\PROJETS\Laravel_Game\resources\views\admin\users" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\layouts" />
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\app\Http\Controllers\Admin" />
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\personnages" />
+      <recent name="D:\wamp64\www\Laravel_Game\Laravel_Game\resources\views\tuto" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,6 +229,7 @@
       <workItem from="1578843598456" duration="29000" />
       <workItem from="1579098847580" duration="80000" />
       <workItem from="1579190117107" duration="3524000" />
+      <workItem from="1579433600809" duration="3971000" />
     </task>
     <servers />
   </component>
@@ -246,11 +254,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575663407094" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575731673986">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579276625053">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575731673986" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575667535126" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579276625053" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1578843627700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -260,15 +268,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="344" y="56" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1578666256889" />
-    <state x="707" y="362" width="607" height="526" key="find.popup" timestamp="1575881874459">
+    <state x="707" y="362" width="646" height="532" key="find.popup" timestamp="1579279987975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="257" width="607" height="526" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575731194907" />
-    <state x="707" y="362" width="607" height="526" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1575881874459" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575881361331">
+    <state x="707" y="362" width="646" height="532" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579279987975" />
+    <state x="701" y="150" key="refactoring.ChangeSignatureDialog" timestamp="1579435019271">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="701" y="150" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579435019271" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579433891506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1575731371837" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1575881361331" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579433891506" />
   </component>
 </project>

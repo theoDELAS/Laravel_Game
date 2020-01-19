@@ -42,7 +42,7 @@ class RegisterController extends Controller
             return '/admin/users';
         }
 
-        return redirect(route('presentation'));
+        return 'presentation';
     }
     /**
      * Create a new controller instance.

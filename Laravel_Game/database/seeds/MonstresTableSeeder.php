@@ -31,7 +31,7 @@ class MonstresTableSeeder extends Seeder
         Monstre::create([
             'name' => 'Soldat',
             'hp' => 80,
-            'degats' => 15,
+            'degats' => 13,
             'defense' => 8,
             'esquive' => 10,
         ]);

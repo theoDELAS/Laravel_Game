@@ -209,19 +209,55 @@ class PersonnageController extends Controller
     public function lancerCombat()
     {
         $monstre = Monstre::get()->where('name', request('name'))->first();
-        $personnage = Personnage::get()->where('pseudo', request('pseudo'))->first();
-        if ($personnage->defense_current < $monstre->degats)
-        {
-            $personnage->update([
-                'hp_current' => $personnage->hp_current - $monstre->degats
+        // Créé une nouvelle instance du monstre attaqué
+        $newMob = new Monstre([
+            'name' => $monstre->name,
+            'hp' => $monstre->hp,
+            'degats' => $monstre->degats,
+            'defense' => $monstre->defense,
+            'esquive' => $monstre->esquive,
         ]);
+        $newMob->save();
+
+        // Récupère le personnage du joueur
+        $personnage = Personnage::get()->where('pseudo', request('pseudo'))->first();
+
+        $nbTours = 1;
+        // Boucle du combat, chaque tour le personnage et le monstre se donne 1 coup
+        while ($personnage->hp_current > 0 && $newMob->hp > 0 )
+        {
+            // Si la defense du perso est inférieur aux degats du monstre, le personnage perd la soustraction des dégats du monstre moins sa defense
+            if ($personnage->defense_current < $newMob->degats)
+            {
+                $personnage->update([
+                    'hp_current' => $personnage->hp_current - ($newMob->degats - $personnage->defense_current)
+                ]);
+            }
+
+            // Same
+            if ($newMob->defense < $personnage->degats_current)
+            {
+                $newMob->update([
+                    'hp' => $newMob->hp - ($personnage->degats_current - $newMob->defense)
+                ]);
+            }
+            $nbTours++;
         }
-
-
         if ($personnage->hp_current <= 0)
         {
-            return "game over";
+            $newMob->delete();
+            $msg = [
+                'error' => 'Vous avez été vaincu. Votre adversaire a ' . $newMob->hp . '/' . $monstre->hp . ' PV. Il a gagné en ' . $nbTours . ' tours'
+            ];
+            return redirect()->back()->with($msg);
         }
-        return redirect()->back();
+        elseif ($newMob->hp <= 0)
+        {
+            $newMob->delete();
+            $msg = [
+                'success' => 'Vous avez vaincu votre adversaire. Il vous reste ' . $personnage->hp_current . '/' . $personnage->hp_max . ' PV. Vous avez gagné en ' . $nbTours . ' tours'
+            ];
+            return redirect()->back()->with($msg);
+        }
     }
 }

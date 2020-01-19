@@ -24,6 +24,24 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         Item::create([
+            'name' => 'Arc',
+            'quantite' => 1,
+            'degats' => 12,
+            'defense' => 0,
+            'hp' => 0,
+            'esquive' => 0,
+        ]);
+
+        Item::create([
+            'name' => 'Baton',
+            'quantite' => 1,
+            'degats' => 16,
+            'defense' => 0,
+            'hp' => 0,
+            'esquive' => 0,
+        ]);
+
+        Item::create([
             'name' => 'Bouclier',
             'quantite' => 1,
             'degats' => 0,

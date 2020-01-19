@@ -34,7 +34,7 @@ class UsersController extends Controller
     {
         if (Gate::denies('admin-users')) {
             if (Gate::denies('basic-users')) {
-                return redirect(route('introduction'));
+                return redirect(route('presentation'));
             }
             return redirect(route('home'));
         }
