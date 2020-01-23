@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4678b5-5e4f-4502-8404-4302faefc525" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/docs/1.0/jeu.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel_Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel_Game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ClassesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ClassesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/docs/1.0/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/1.0/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/docs/1.0/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/docs/1.0/overview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/appGame.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/appGame.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/combatChevaux.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/combatChevaux.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/debut.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/debut.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/fin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/fin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tuto/introduction.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +232,7 @@
       <workItem from="1579538894548" duration="349000" />
       <workItem from="1579681493056" duration="166000" />
       <workItem from="1579785149822" duration="5812000" />
-      <workItem from="1579794339442" duration="169000" />
+      <workItem from="1579794339442" duration="571000" />
     </task>
     <servers />
   </component>

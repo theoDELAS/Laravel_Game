@@ -3,8 +3,7 @@
 @section('content')
     <div>
         {!! nl2br("
-            Après plusieurs jours de voyage, vous apercevez la première taverne depuis votre départ. Elle ressemble plus à une cabane abandonnée et mal fréquentée,
-            mais honnêtement ça sera toujours mieux que les nuits que vous avez passées dehors.
+            Après plusieurs jours de voyage, vous apercevez la première taverne depuis votre départ. Elle ressemble plus à une cabane abandonnée et mal fréquentée, mais honnêtement ça sera toujours mieux que les nuits que vous avez passées dehors.
             Vous ne vous doutiez pas que votre voyage serait aussi rude, vos ressources sont épuisées et votre nécessaire de campement en piteux état.
             De la lumière vous parvient de la taverne. En vous approchant, vous distinguez quelques barriques ainsi qu'un abri pour le bois de la cheminée.
             L'une des vitres, cassée, vous permet d'entendre ce que vous pensez être les propriétaires des deux chevaux attachés à la barrière.
