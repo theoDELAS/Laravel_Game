@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>NakariK</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -67,13 +67,13 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel Game
+                    NakariK
                 </div>
 
                 <div class="links">
                     @if (Route::has('login'))
                         @auth
-                            <a href="{{ url('/home') }}">Menu principal</a>
+                            <a href="{{ route('home') }}">Menu principal</a>
                         @else
                             <a href="{{ route('login') }}">Se connecter</a>
 

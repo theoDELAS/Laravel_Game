@@ -30,7 +30,7 @@ class ClassesTableSeeder extends Seeder
             'degats' => 12,
             'defense' => 10,
             'esquive' => 10,
-            'histoire' => 'Vous avez grandi dans la magnifique forêt de Falyar, remplies d\'arbres géants habités par la tribu des Taëlyan.
+            'histoire' => 'Vous avez grandi dans la magnifique forêt de Falyar, remplie d\'arbres géants habités par la tribu des Taëlyan.
             Votre mode de vie se basant sur la chasse, vous êtes rapidement devenu le meilleur archer de votre tribu.
             Votre chef, Ulore, vous a confié l\'étude de la désolation dans les terres de Gil\' Ead.',
         ]);

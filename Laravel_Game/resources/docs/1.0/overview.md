@@ -2,7 +2,7 @@
 
 ## Contexte
 
-Ce projet
+Ce
 
 ---
 
@@ -10,5 +10,3 @@ Ce projet
 
 <a name="section-1"></a>
 ## First Section
-
-Write something cool.. 🦊
