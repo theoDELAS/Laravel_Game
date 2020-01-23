@@ -3,13 +3,12 @@
 @section('content')
     <div>
         {!! nl2br("
-       Vous vous approchez minutieusement des chevaux et détachez leur lanière les reliants à leur point d'ancrage, suite à quoi vous les faites fuir
-       avec une tape sur la croupe.
+       Vous vous approchez minutieusement des chevaux et détachez leur lanière les reliants à leur point d'ancrage, suite à quoi vous les faites fuir avec une tape sur la croupe.
        Vous partez vous cacher derrière les barriques en attendant que les hommes sortent.
-       Vous les entendez se posez des questions concernant les bruits dehors.
+       Vous les entendez se poser des questions concernant les bruits dehors.
        - Qu'est ce qui se passe?
        - Attend là, je vais aller voir.
-       Lorsque l'homme sors il s'écria que les chevaux ne sont plus là.
+       Lorsque l'homme sort il s'écria que les chevaux n'étaient plus là.
        Vous vous précipitez sur lui dans son dos et tranchez sa gorge.
        Les bruits d'étouffement de son camarade ayant interpellé l'homme restant, il accoura dehors et tomba nez à nez avec le cadavre giseant de son compère avec vous derrière.
        - C'est toi qui viens de faire ça petit merdeux ? Vocifera l'homme.
