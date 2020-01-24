@@ -1,2 +1,3 @@
 - ## Get Started
-    - [Overview](/{{route}}/{{version}}/overview)
+    - [Le jeu](/{{route}}/{{version}}/jeu)
+    - [Installation](/{{route}}/{{version}}/overview)

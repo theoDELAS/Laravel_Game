@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Laravel Game</title>
+    <title>NakariK</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

@@ -13,15 +13,15 @@
                         <input type="hidden" class="form-control input" name="pseudo" id="pseudo" value="{{ $personnage->pseudo }}">
                         {!! nl2br("
                         À la suite de ce combat victorieux vous vous dirigez vers le tavernier, que vous retrouvez séquestré, bailloné, ligoté.
-                        Vous le détachez et l'aidez à s'asseoir, en attendant qu'il reprenne ses esprits vous allez cherchez une cruche d'eau.
+                        Vous le détachez et l'aidez à s'asseoir, en attendant qu'il reprenne ses esprits vous allez chercher une cruche d'eau.
                         En arrivant devant lui il vous adresse ces quelques mots:
                         -Merci de votre aide aventurier, sans vous je serais mort à l'heure qu'il est.
                         -Que vous voulez ces brigands?
                         -Sûrement récupérer mes maigres profits des 3 derniers mois que je n'ai pas encore pu mettre en sécurité.
                         -Il ne devrait plus vous importuner maintenant.
-                        -Pour vous remercier, vous pouvez passer la nuit dans ma taverne. Le dernier aventurier qui est passé ici n'avait pas de quoi payer ça nuit, il m'a donc laisser son arme, prenez la, elle vous sera plus utile qu'à moi.
+                        -Pour vous remercier, vous pouvez passer la nuit dans ma taverne. Le dernier aventurier qui est passé ici n'avait pas de quoi payer sa nuit, il m'a donc laisser son arme, prenez la, elle vous sera plus utile qu'à moi.
 
-                        Après cette nuit à la taverne, vous remerciez le géreant de cette dernière et vous partez en direction de votre prochaine aventure.
+                        Après cette nuit à la taverne, vous remerciez le gérant de cette dernière et vous partez en direction de votre prochaine aventure.
 
                        ") !!}
                         @if (empty($itemsInventaire))
