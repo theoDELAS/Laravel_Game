@@ -10,7 +10,7 @@
 
 - Formulaire de connexion à son compte  
 - Formulaire d'inscription  
-- Leaderboard avec les meilleurs personnages  
+ 
 
 ### Menu principal (connecté) :
 
@@ -53,13 +53,8 @@
 - Système d'achievement
 - Modification image compte
 - CRUD Histoire
+- Leaderboard avec les meilleurs personnages 
 
 
 Trello's link:
 https://trello.com/b/DXgsMsVx/projet-laravel
-
-
-
-Questions:
-
-Possibilité d'utiliser JS et Framework CSS ?
